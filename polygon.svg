@@ -1,0 +1,22 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20">
+    <defs>
+        <style type="text/css">
+            polygon[id] {
+                display: none;
+            }
+            
+            polygon[id]:target {
+                display: inline;
+            }
+        </style>
+    </defs>
+	<polygon id="stroked"
+			 stroke-width="3"
+             vector-effect="non-scaling-stroke"
+             stroke="#00789c"
+             fill="white"
+	 		 points="4.77,0.82 0.6,11.45 9.43,18.69 19.04,12.54 16.16,1.49"/>
+	<polygon id="blank"
+             fill="white"
+	 		 points="4.77,0.82 0.6,11.45 9.43,18.69 19.04,12.54 16.16,1.49"/>
+</svg>

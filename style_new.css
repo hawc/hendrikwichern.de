@@ -18,8 +18,12 @@ p {
   margin: 0 0 20px;
 }
 
+a:hover,
+a:focus,
+a:active,
 a {
   text-decoration: none;
+  color: #444;
 }
 
 html {
@@ -62,12 +66,27 @@ h1::before {
   z-index: -1;
 }
 
+h2,
+h3 {
+  margin: 0;
+  font-size: 100%;
+}
+
 /*  BASE STYLES  */
 
 header,
 footer,
 main {
-  padding: 0 40px;
+    padding: 0 40px;
+}
+
+header {
+    margin-top: 40px;
+}
+
+footer {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 main {
@@ -87,6 +106,11 @@ main {
   width: 75%;
 }
 
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /*  ELEMENT STYLES  */
 
 .box {
@@ -103,6 +127,14 @@ main {
   white-space: nowrap;
 }
 
+.box:hover {
+    animation: hover 2s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-delay: -1s;
+    transform-origin: center center;    
+}
+
 /* .box--solid {
   background-image: linear-gradient(to right, #00789c 100%, transparent 100%), linear-gradient(to right, #00789c 100%, transparent 100%), linear-gradient(to bottom, #00789c 100%, transparent 100%), linear-gradient(to bottom, #00789c 100%, transparent 100%);
 } */
@@ -117,11 +149,32 @@ object {
   pointer-events: none;
 }
 
+.box__input,
+.box__textarea {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    border: none;
+    border-bottom: 3px solid #00789c;
+  font-family: "Helvetica Neue", Helvetiva, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  font-style: oblique;
+  line-height: 24px;
+  letter-spacing: 5px;
+}
+
+.box__textarea {
+    border-bottom: none;
+    height: 140px;
+}
+
 /* SECTION STYLES */
 
 .mainContent {
   position: relative;
-  padding-top: 100px;
+  margin-top: 200px;
 }
 
 .skillsList__wrapper {
@@ -131,7 +184,7 @@ object {
 .skillsList__title,
 .skillsList__titleShadow {
   position: absolute;
-  top: 0;
+  top: -80px;
   right: -100px;
   height: 140px;
   width: 140px;
@@ -156,6 +209,59 @@ object {
 
 .skillsList > li {
   padding: 20px;
+}
+
+.skillsList__item {
+    position: relative;
+}
+
+.skillsList__itemHighlight {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    height: 30px;
+    width: 60px;
+}
+
+.skillsList__itemHighlight::before,
+.skillsList__itemHighlight::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 30px;
+    width: 60px;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 196, 196, 0.6);
+}
+
+.skillsList__itemHighlight::after {
+    top: 30px;
+    height: 15px;
+    width: 30px;
+}
+
+.cvList__title {
+  margin-bottom: -40px;
+  padding-right: 40px;
+}
+
+.cvList__title,
+.cvList__titleShadow {
+  position: absolute;
+  top: -60px;
+  left: -80px;
+  height: 140px;
+  width: 140px;
+  line-height: 140px;
+  text-align: center;
+}
+
+.cvList__titleShadow {
+  right: auto;
+  left: -10px;
+  top: 16px;
+  z-index: -1;
 }
 
 .cvList {
@@ -198,4 +304,123 @@ object {
 .cvList__time {
   left: 100%;
   bottom: calc( -72px - 20px );
+}
+
+.contact__title {
+  margin-bottom: -40px;
+}
+
+.contact__title,
+.contact__titleShadow {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  height: 160px;
+  width: 160px;
+  line-height: 160px;
+  text-align: center;
+}
+
+.contact__titleShadow {
+  right: -10px;
+  top: 16px;
+  z-index: -1;
+}
+
+.contact > div {
+  padding: 20px;
+}
+
+.contact__item {
+    position: relative;
+}
+
+.contact__itemBox {
+    position: absolute;
+    top: -21.5px;
+    right: -21.5px;
+    padding: 10px;
+}
+
+.contact__itemBox--textarea {
+    right: calc( (100% - ( ((100% + 40px) / .75 * .5) - 40px )) / 2 - 21.5px);
+}
+
+.contact__itemHighlight {
+    position: absolute;
+    top: -27px;
+    right: -27px;
+    height: 30px;
+    width: 60px;
+}
+
+.contact__itemHighlight::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 60px;
+    width: 60px;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 196, 196, 0.6);
+    border-radius: 100%;
+}
+
+/* ANIMATIONS */
+
+@keyframes hover {
+    from {
+        /* transform-origin: center right; */
+        /* transform: translateY(6px) rotate(1deg); */
+    }
+    to {
+        /* transform-origin: center right; */
+        /* transform: translateY(-6px) rotate(-1deg); */
+    }
+}
+
+/* PLUGINS */
+
+.tippy-tooltip.hw-theme {
+    background-color: white;
+    color: black;
+    border: 3px solid #00789c;
+    border-radius: 0;
+    box-shadow: -10px -10px 0 rgba(0, 120, 156, 0.6);
+}
+
+.tippy-tooltip.hw-theme[data-animatefill] {
+    background-color: transparent;
+}
+
+.tippy-tooltip.hw-theme .tippy-backdrop {
+    background-color: white;
+}
+.tippy-popper[x-placement^='top'] .tippy-tooltip.hw-theme .tippy-arrow {
+    border-top-color: white;
+}
+.tippy-popper[x-placement^='top'] .tippy-tooltip.hw-theme .tippy-arrow::after {
+    content: '';
+    top: 100%;
+	left: 50%;
+	height: 0;
+	width: 0;
+	border: solid transparent;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: #00789c;
+	border-width: 10px;
+	margin-top: -6px;
+    margin-left: -10px;
+    z-index: -1;
+}
+.tippy-popper[x-placement^='bottom'] .tippy-tooltip.hw-theme .tippy-arrow {
+    border-bottom-color: white;
+}
+.tippy-popper[x-placement^='left'] .tippy-tooltip.hw-theme .tippy-arrow {
+    border-left-color: white;
+}
+.tippy-popper[x-placement^='right'] .tippy-tooltip.hw-theme .tippy-arrow {
+    border-right-color: white;
 }

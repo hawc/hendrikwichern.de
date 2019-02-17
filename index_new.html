@@ -24,6 +24,7 @@
             <li class="width-1-2">
               <div class="box skillsList__item">
                 <object type="image/svg+xml" data="box.svg#dashed" aria-hidden></object>
+                <i class="skillsList__itemHighlight" data-tippy-content="Tooltip"></i>
                 HTML
               </div>
             </li>
@@ -61,8 +62,12 @@
           </ul>
         </div>
       </section>
-      <section>
-        <h2>CV</h2>
+      <section class="mainContent">
+        <h2 class="cvList__title">
+          <object class="cvList__titleShadow" type="image/svg+xml" data="triangle.svg#blank" aria-hidden></object>
+          <object type="image/svg+xml" data="triangle.svg#stroked" aria-hidden></object>
+          CV
+        </h2>
         <div>
           <ul class="cvList">
             <li class="width-3-4">
@@ -110,12 +115,71 @@
           </ul>
         </div>
       </section>
-      <section>
-        <h2>Contact</h2>
+      <section class="mainContent">
+        <h2 class="contact__title">
+          <object class="contact__titleShadow" type="image/svg+xml" data="polygon.svg#blank" aria-hidden></object>
+          <object type="image/svg+xml" data="polygon.svg#stroked" aria-hidden></object>
+          Contact
+        </h2>
+        <form class="contact">
+            <div class="width-1-1">
+              <div class="box contact__item">
+                <object type="image/svg+xml" data="box.svg#dashed" aria-hidden></object>
+                Hit me up, I'm there for you.
+              </div>
+            </div>
+            <div class="width-1-2 centered">
+              <div class="box contact__item">
+                <object type="image/svg+xml" data="box.svg#stroked" aria-hidden></object>
+                <label class="box contact__itemBox" for="contact__item--name">
+                  <object type="image/svg+xml" data="box.svg#dashed" aria-hidden></object>
+                  Your Name</label>
+                <input id="contact__item--name" class="box__input"/>
+              </div>
+            </div>
+            <div class="width-1-2 centered">
+              <div class="box contact__item">
+                <object type="image/svg+xml" data="box.svg#stroked" aria-hidden></object>
+                <label class="box contact__itemBox" for="contact__item--mail">
+                  <object type="image/svg+xml" data="box.svg#dashed" aria-hidden></object>
+                  Your Email</label>
+                <input id="contact__item--mail" class="box__input"/>
+              </div>
+            </div>
+            <div class="width-1-2 centered">
+              <div class="box contact__item">
+                <object type="image/svg+xml" data="box.svg#stroked" aria-hidden></object>
+                <label class="box contact__itemBox" for="contact__item--subject">
+                  <object type="image/svg+xml" data="box.svg#dashed" aria-hidden></object>
+                  The Subject</label>
+                <input id="contact__item--subject" class="box__input"/>
+              </div>
+            </div>
+            <div class="width-3-4 centered">
+              <div class="box contact__item">
+                <object type="image/svg+xml" data="box.svg#stroked" aria-hidden></object>
+                <i class="contact__itemHighlight" data-tippy-content="Your kindness is highly appreciated"></i>
+                <label class="box contact__itemBox contact__itemBox--textarea" for="contact__item--subject">
+                  <object type="image/svg+xml" data="box.svg#dashed" aria-hidden></object>
+                  Your message to me</label>
+                <textarea id="contact__item--subject" class="box__textarea"></textarea>
+              </div>
+            </div>
+        </form>
       </section>
     </main>
     <footer>
       <a href="#">Imprint</a>
     </footer>
+    <script src="popper.js"></script>
+    <script src="tippy.js"></script>
+    <script>
+      tippy('[data-tippy-content]', {
+        theme: 'hw',
+        arrow: true,
+        inertia: true,
+        size: 'large'
+        })
+    </script>
   </body>
 </html>

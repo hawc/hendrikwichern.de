@@ -1,18 +1,15 @@
 <svg height="100" width="100" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
     <defs>
-    <style type="text/css">
-        rect[id] {
-            display: none;
-        }
-        
-        rect[id]:target {
-            display: inline;
-        }
-
-        rect {
-        }
-    </style>
-  </defs>
+        <style type="text/css">
+            rect[id] {
+                display: none;
+            }
+            
+            rect[id]:target {
+                display: inline;
+            }
+        </style>
+    </defs>
     <rect id="stroked"
         height="100"
         width="100"

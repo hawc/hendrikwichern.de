@@ -101,48 +101,13 @@ main {
   /* background-image: url('box.svg'); */
   /* background-size: 100% 100%; */
   white-space: nowrap;
-  /* animation: flyIn 3s; */
-  /* animation-delay: 1s; */
-}
-
-/* .box:hover {
-  animation: wiggle .3s infinite;
-  transform-origin: center center;
-} */
-/* 
-@keyframes wiggle {
-  0% {
-    transform: rotate(0);
-  }
-  25% {
-    transform: rotate(-.1deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(.1deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-} */
-
-@keyframes flyIn {
-  0% {
-    transform: translateY(10000px) rotate(120deg);
-  }
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
 }
 
 /* .box--solid {
   background-image: linear-gradient(to right, #00789c 100%, transparent 100%), linear-gradient(to right, #00789c 100%, transparent 100%), linear-gradient(to bottom, #00789c 100%, transparent 100%), linear-gradient(to bottom, #00789c 100%, transparent 100%);
 } */
 
-.box svg,
-.box object {
+object {
   position: absolute;
   top: 0;
   left: 0;
@@ -153,6 +118,35 @@ main {
 }
 
 /* SECTION STYLES */
+
+.mainContent {
+  position: relative;
+  padding-top: 100px;
+}
+
+.skillsList__wrapper {
+  margin-top: -20px;
+}
+
+.skillsList__title,
+.skillsList__titleShadow {
+  position: absolute;
+  top: 0;
+  right: -100px;
+  height: 140px;
+  width: 140px;
+  margin: 0;
+  line-height: 140px;
+  text-align: center;
+}
+
+.skillsList__titleShadow {
+  right: -10px;
+  top: 10px;
+  border-radius: 100%;
+  background-color: white;
+  z-index: -1;
+}
 
 .skillsList {
   display: flex;

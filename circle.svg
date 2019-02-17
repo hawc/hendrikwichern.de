@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+  <circle cx="12.5" cy="12.5" r="12"
+          stroke-width="3"
+          vector-effect="non-scaling-stroke"
+          stroke="#00789c"
+          fill="white" />
+</svg>

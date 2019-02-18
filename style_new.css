@@ -1,75 +1,86 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 svg {
-  display: block;
+    display: block;
 }
 
 ul,
 li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 p {
-  margin: 0;
-  margin: 0 0 20px;
+    margin: 0;
+    margin: 0 0 20px;
 }
 
 a:hover,
 a:focus,
 a:active,
 a {
-  text-decoration: none;
-  color: #444;
+    text-decoration: none;
+    color: #444;
 }
 
 html {
-  font-size: 20px;
-  line-height: 24px;
+    font-size: 20px;
+    line-height: 24px;
 }
 
 body {
-  position: relative;
-  min-width: 480px;
-  margin: 0;
-  font-family: "Helvetica Neue", Helvetiva, Arial, sans-serif;
-  font-weight: 800;
-  font-size: 20px;
-  font-style: oblique;
-  line-height: 24px;
-  letter-spacing: 5px;
-  color: #444;
-  background-color: #F2FAFF;
+    position: relative;
+    min-width: 480px;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetiva, Arial, sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    font-style: oblique;
+    line-height: 24px;
+    letter-spacing: 5px;
+    color: #444;
+    background-color: #F2FAFF;
 }
 
 h1 {
-  position: relative;
-  display: inline-block;
-  font-size: 34px;
-  line-height: 42px;
-  letter-spacing: 13px;
+    position: relative;
+    display: inline-block;
+    font-size: 34px;
+    line-height: 42px;
+    letter-spacing: 13px;
 }
 
 h1::before {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 0;
-  height: 20px;
-  width: 75%;
-  transform: translate(-20px, -10px);
-  background-color: #FFF53F;
-  opacity: 0.6;
-  z-index: -1;
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    height: 20px;
+    width: 75%;
+    transform: translate(-20px, -10px);
+    background-color: #FFF53F;
+    opacity: 0.6;
+    z-index: -1;
 }
 
 h2,
 h3 {
-  margin: 0;
-  font-size: 100%;
+    margin: 0;
+    font-size: 100%;
+}
+
+h2 {
+    position: relative;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 800px) {
+    h2 {
+        position: absolute;
+    }
 }
 
 /*  BASE STYLES  */
@@ -90,20 +101,38 @@ footer {
 }
 
 main {
-  max-width: 880px;
-  margin: 0 auto;
+    max-width: 880px;
+    margin: 0 auto;
 }
 
 .width-1-1 {
-  width: 100%;
+    width: 100%;
 }
 
 .width-1-2 {
-  width: 50%;
+    width: 50%;
 }
 
 .width-3-4 {
-  width: 75%;
+    width: 75%;
+}
+
+@media only screen and (min-width: 800px) {
+    .width-m-1-1 {
+        width: 100%;
+    }
+    
+    .width-m-1-2 {
+        width: 50%;
+    }
+    
+    .width-m-3-4 {
+        width: 75%;
+    }
+    
+    .width-m-auto {
+        width: auto;
+    }
 }
 
 .centered {
@@ -111,20 +140,38 @@ main {
     margin-right: auto;
 }
 
+.highlight {
+    position: absolute;
+    top: -27px;
+    right: -27px;
+    height: 30px;
+    width: 60px;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 60px;
+    width: 60px;
+    top: 0;
+    right: 0;
+}
+
 /*  ELEMENT STYLES  */
 
 .box {
-  position: relative;
-  padding: 24px;
-  border: 0px dashed #00789c;
-  /* background-color: white; */
-  /* background-image: linear-gradient(to right, #00789c 50%, transparent 50%), linear-gradient(to right, #00789c 50%, transparent 50%), linear-gradient(to bottom, #00789c 50%, transparent 50%), linear-gradient(to bottom, #00789c 50%, transparent 50%); */
-  /* background-position: left top, left bottom, left top, right top; */
-  /* background-repeat: repeat-x, repeat-x, repeat-y, repeat-y; */
-  /* background-size: 30px 3px, 30px 3px, 3px 30px, 3px 30px; */
-  /* background-image: url('box.svg'); */
-  /* background-size: 100% 100%; */
-  white-space: nowrap;
+    position: relative;
+    padding: 24px;
+    border: 0px dashed #00789c;
+    /* background-color: white; */
+    /* background-image: linear-gradient(to right, #00789c 50%, transparent 50%), linear-gradient(to right, #00789c 50%, transparent 50%), linear-gradient(to bottom, #00789c 50%, transparent 50%), linear-gradient(to bottom, #00789c 50%, transparent 50%); */
+    /* background-position: left top, left bottom, left top, right top; */
+    /* background-repeat: repeat-x, repeat-x, repeat-y, repeat-y; */
+    /* background-size: 30px 3px, 30px 3px, 3px 30px, 3px 30px; */
+    /* background-image: url('box.svg'); */
+    /* background-size: 100% 100%; */
+    white-space: nowrap;
 }
 
 .box:hover {
@@ -140,13 +187,13 @@ main {
 } */
 
 object {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .box__input,
@@ -157,12 +204,12 @@ object {
     padding: 0;
     border: none;
     border-bottom: 3px solid #00789c;
-  font-family: "Helvetica Neue", Helvetiva, Arial, sans-serif;
-  font-weight: 800;
-  font-size: 20px;
-  font-style: oblique;
-  line-height: 24px;
-  letter-spacing: 5px;
+    font-family: "Helvetica Neue", Helvetiva, Arial, sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    font-style: oblique;
+    line-height: 24px;
+    letter-spacing: 5px;
 }
 
 .box__textarea {
@@ -173,38 +220,44 @@ object {
 /* SECTION STYLES */
 
 .mainContent {
-  position: relative;
-  margin-top: 200px;
-}
-
-.skillsList__wrapper {
-  margin-top: -20px;
+    position: relative;
+    margin-top: 200px;
 }
 
 .skillsList__title,
 .skillsList__titleShadow {
-  position: absolute;
-  top: -80px;
-  right: -100px;
-  height: 140px;
-  width: 140px;
-  margin: 0;
-  line-height: 140px;
-  text-align: center;
+    height: 140px;
+    width: 140px;
+    line-height: 140px;
+    text-align: center;
 }
 
 .skillsList__titleShadow {
-  right: -10px;
-  top: 10px;
-  border-radius: 100%;
-  background-color: white;
-  z-index: -1;
+    border-radius: 100%;
+    background-color: white;
+    z-index: -1;
+}
+
+@media only screen and (min-width: 800px) {
+    .skillsList__wrapper {
+        margin-top: -20px;
+    }
+
+    .skillsList__title {
+        top: -80px;
+        right: -100px;
+    }
+
+    .skillsList__titleShadow {
+        right: -10px;
+        top: 10px;
+    }
 }
 
 .skillsList {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
 }
 
 .skillsList > li {
@@ -216,7 +269,6 @@ object {
 }
 
 .skillsList__itemHighlight {
-    position: absolute;
     top: -15px;
     right: -15px;
     height: 30px;
@@ -242,97 +294,147 @@ object {
 }
 
 .cvList__title {
-  margin-bottom: -40px;
-  padding-right: 40px;
+    padding-right: 40px;
 }
 
 .cvList__title,
 .cvList__titleShadow {
-  position: absolute;
-  top: -60px;
-  left: -80px;
-  height: 140px;
-  width: 140px;
-  line-height: 140px;
-  text-align: center;
+    height: 140px;
+    width: 140px;
+    line-height: 140px;
+    text-align: center;
 }
 
 .cvList__titleShadow {
-  right: auto;
-  left: -10px;
-  top: 16px;
-  z-index: -1;
+    z-index: -1;
+}
+
+@media only screen and (min-width: 800px) {
+    .cvList__title {
+        top: -60px;
+        left: -80px;
+        margin-bottom: -40px;
+    }
+
+    .cvList__titleShadow {
+        top: 16px;
+        left: -10px;
+        right: auto;
+    }
 }
 
 .cvList {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
 }
 
 .cvList > li {
-  margin-bottom: 80px;
-  padding: 20px;
+    height: 180px;
+    margin-bottom: 80px;
+    padding: 20px;
 }
 
 .cvList__item {
-  position: relative;
+    position: relative;
 }
 
 .cvList__job,
 .cvList__time {
-  position: absolute;
-}
-
-.cvList__job::before,
-.cvList__time::before {
-  position: absolute;
-  content: '';
-  top: -28px;
-  left: -28px;
-  height: 50px;
-  width: 50px;
-  background-image: url('arrow.svg');
-  background-size: cover;
+    position: absolute;
 }
 
 .cvList__job {
-  right: 40px;
-  bottom: calc( -72px - 20px );
+    top: 80px;
+    left: 0;
 }
 
 .cvList__time {
-  left: 100%;
-  bottom: calc( -72px - 20px );
+    top: 160px;
+    left: 0;
 }
 
-.contact__title {
-  margin-bottom: -40px;
+@media only screen and (min-width: 800px) {
+    .cvList > li {
+        height: auto;
+    }
+
+    .cvList__job::before,
+    .cvList__time::before {
+        position: absolute;
+        content: '';
+        top: -28px;
+        left: -28px;
+        height: 50px;
+        width: 50px;
+        background-image: url('arrow.svg');
+        background-size: cover;
+    }
+
+    .cvList__job {
+        top: auto;
+        right: 40px;
+        left: auto;
+        bottom: calc( -72px - 20px );
+    }
+
+    .cvList__time {
+        top: auto;
+        left: 100%;
+        bottom: calc( -72px - 20px );
+    }
+}
+
+.cvList__itemHighlight::after {
+    background-color: #FFF53F;
+    opacity: 0.6;
+    border-radius: 100%;
+}
+
+.cvList__jobHighlight {
+    top: -13.5px;
+    right: -13.5px;
+}
+
+.cvList__jobHighlight::after {
+    height: 40px;
+    width: 30px;
+    background-color: rgb(182, 0, 106);
+    opacity: 0.6;
 }
 
 .contact__title,
 .contact__titleShadow {
-  position: absolute;
-  top: -80px;
-  right: -80px;
-  height: 160px;
-  width: 160px;
-  line-height: 160px;
-  text-align: center;
+    height: 160px;
+    width: 160px;
+    line-height: 160px;
+    text-align: center;
 }
 
 .contact__titleShadow {
-  right: -10px;
-  top: 16px;
-  z-index: -1;
+    z-index: -1;
+}
+
+@media only screen and (min-width: 800px) {
+    .contact__title {
+        top: -80px;
+        right: -80px;
+        margin-bottom: -40px;
+    }
+
+    .contact__titleShadow {
+        right: -10px;
+        top: 16px;
+    }
 }
 
 .contact > div {
-  padding: 20px;
+    padding: 20px;
 }
 
 .contact__item {
     position: relative;
+    white-space: normal;
 }
 
 .contact__itemBox {
@@ -346,23 +448,10 @@ object {
     right: calc( (100% - ( ((100% + 40px) / .75 * .5) - 40px )) / 2 - 21.5px);
 }
 
-.contact__itemHighlight {
-    position: absolute;
-    top: -27px;
-    right: -27px;
-    height: 30px;
-    width: 60px;
-}
 
 .contact__itemHighlight::after {
-    content: '';
-    position: absolute;
-    display: block;
-    height: 60px;
-    width: 60px;
-    top: 0;
-    right: 0;
     background-color: rgba(0, 196, 196, 0.6);
+    opacity: 0.6;
     border-radius: 100%;
 }
 

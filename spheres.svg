@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <style>
+      #waves,
+      #prongs,
+      #waves .backdrop,
+      #prongs .backdrop {
+        fill: none;
+        stroke-width: 5px;
+      }
+      #waves .backdrop,
+      #prongs .backdrop {
+        stroke: black;
+      }
+      #waves .fill,
+      #prongs .fill {
+        stroke: blue;
+      }
+      #circle,
+      #triangle,
+      #circle .backdrop,
+      #triangle .backdrop {
+        stroke-width: 0;
+      }
+      #circle .backdrop,
+      #triangle .backdrop {
+        fill: black;
+      }
+      #circle .fill,
+      #triangle .fill {
+        fill: blue;
+      }
+    </style>
+  </defs>
+  <g id="waves">
+    <path class="backdrop" d="M79.932,33.889c-7.9,0-7.893,14.222-15.55,14.222s-7.66-14.222-15.55-14.222-7.675,14.222-15.55,14.222S25.42,33.889,17.733,33.889,10.1,48.111,2.183,48.111"/>
+    <path class="fill" d="M78.932,31.889c-7.9,0-7.893,14.222-15.55,14.222s-7.66-14.222-15.55-14.222-7.675,14.222-15.55,14.222S24.42,31.889,16.733,31.889,9.1,46.111,1.183,46.111"/>
+  </g>
+  <g id="circle">
+    <circle class="backdrop" cx="41" cy="42" r="18"/>
+    <circle class="fill" cx="40" cy="40" r="18"/>
+  </g>
+  <g id="triangle">
+    <path class="backdrop" d="M14.111,39.971L36.136,16.783,65.679,67Z"/>
+    <path class="fill" d="M13.111,37.971L35.136,14.783,64.679,65Z"/>
+  </g>
+  <g id="prongs">
+    <path class="backdrop" d="M78.264,48.552l-15.108-15.1-15.107,15.1-15.108-15.1-15.107,15.1L2.726,33.448"/>
+    <path class="fill" d="M77.264,46.552l-15.108-15.1-15.107,15.1-15.108-15.1-15.107,15.1L1.726,31.448"/>
+  </g>
+</svg>

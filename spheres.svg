@@ -1,6 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
   <defs>
     <style>
+      g[id] {
+          display: none;
+      }
+            
+      g[id]:target {
+          display: inline;
+      }
       #waves,
       #prongs,
       #waves .backdrop,
@@ -14,7 +21,7 @@
       }
       #waves .fill,
       #prongs .fill {
-        stroke: blue;
+        stroke: #00ff00;
       }
       #circle,
       #triangle,
@@ -28,7 +35,7 @@
       }
       #circle .fill,
       #triangle .fill {
-        fill: blue;
+        fill: #00ff00;
       }
     </style>
   </defs>

@@ -91,6 +91,16 @@ main {
     padding: 0 40px;
 }
 
+.svgSphere {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 80px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
 header {
     margin-top: 40px;
 }

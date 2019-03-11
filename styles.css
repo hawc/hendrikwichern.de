@@ -65,7 +65,7 @@ h2 {
     display: inline;
 }
 .skills > li:not(:last-child)::after {
-    content: ',';
+    content: ' •';
 
 }
 header {

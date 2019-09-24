@@ -1,23 +1,19 @@
 * {
     box-sizing: border-box;
 }
-
 svg {
     display: block;
 }
-
 ul,
 li {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-
 p {
     margin: 0;
     margin: 0 0 20px;
 }
-
 a:hover,
 a:focus,
 a:active,
@@ -26,12 +22,10 @@ a {
     font-style: oblique;
     color: blue;
 }
-
 html {
     font-size: 20px;
     line-height: 24px;
 }
-
 body {
     position: relative;
     min-width: 480px;
@@ -42,7 +36,6 @@ body {
     overflow: hidden;
     letter-spacing: 2px;
 }
-
 h1,
 h2,
 h3 {
@@ -66,7 +59,7 @@ h2 {
     display: inline;
 }
 .skills > li:not(:last-child)::after {
-    content: ' •';
+    content: ',';
 
 }
 header {
@@ -119,6 +112,8 @@ h1 {
     display: inline-block;
     cursor: pointer;
 }
+/* Better not look, it's getting ugly. */
+
 h1 .glitch1,
 h1 .glitch2 {
     position: absolute;

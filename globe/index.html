@@ -47,15 +47,17 @@
             function draw() {
                 pg.clear();
                 pg.background(0, 0, 0);
-                pg.pointLight(250, 250, 250, width / 3, height / 3, 50);
+                let locX = mouseX - width / 2;
+                let locY = mouseY - height / 2;
+                pg.pointLight(250, 250, 250, locX, locY, 50);
                 pg.noStroke();
+                pg.fill(color(255, 255, 255));
 
                 pg.push();
                 pg.rotateY(frameCount * 0.015);
                 pg.rotateZ(0.25);
                 pg.rotateX(-0.25);
                 pg.rotateY(frameCount * 0.01);
-                pg.fill(color(255, 255, 255));
 
                 pg.push();
                 let globeDiameter = globeDiameterSlider.value();

@@ -61,6 +61,7 @@
 
                 pg.push();
                 let globeDiameter = globeDiameterSlider.value();
+                pg.pointLight(250, 250, 250, locX, locY, 250);
                 pg.sphere(globeDiameter);
                 pg.pop();
 
@@ -87,7 +88,6 @@
                 pg.pop();
 
                 pg.pop();
-                pg.pointLight(250, 250, 250, locX, locY, 250);
                 shader(camShader);
                 camShader.setUniform('tex0', pg);
                 rect(0, 0, width, height);

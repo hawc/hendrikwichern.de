@@ -61,7 +61,7 @@
 
                 pg.push();
                 let globeDiameter = globeDiameterSlider.value();
-                pg.pointLight(250, 250, 250, locX, locY, 250);
+                pg.pointLight(250, 250, 250, -locX, -locY, 150);
                 pg.sphere(globeDiameter);
                 pg.pop();
 

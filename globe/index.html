@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>globe</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+        <style>
+            canvas {
+                image-rendering: -moz-crisp-edges;
+                image-rendering: -webkit-crisp-edges;
+                image-rendering: pixelated;
+                image-rendering: crisp-edges;
+            }
+        </style>
+        <script>
+            function setup() {
+                    //pixelDensity(0.25);
+                    createCanvas(600, 600, WEBGL);
+                }
+
+                function draw() {
+                    background(0, 0, 0);
+                    noStroke();
+
+                    push();
+                    rotateY(frameCount * 0.015);
+                    rotateZ(0.25);
+                    rotateX(-0.5);
+                    rotateY(frameCount * 0.01);
+
+                    push();
+                    fill(color(255, 255, 255));
+                    sphere(100);
+                    pop();
+
+                    push();
+                    rotateX(0);
+                    rotateY(0);
+                    rotateZ(0);
+                    fill(255, 255, 255);
+                    rotateX(1.5708);
+                    torus(130, 15, 32, 40);
+                    pop();
+
+                    pop();
+                    filter(TRESHOLD);
+                }
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -49,7 +49,8 @@
                 pg.background(0, 0, 0);
                 let locX = mouseX - width / 2;
                 let locY = mouseY - height / 2;
-                pg.pointLight(250, 250, 250, locX, locY, 150);
+                console.log(locX);
+                pg.pointLight(250, 250, 250, locX, locY, 250);
                 pg.noStroke();
                 pg.fill(color(255, 255, 255));
 
@@ -70,7 +71,7 @@
                 pg.rotateZ(0);
                 pg.rotateX(1.5708);
                 // let torusDetailY = chunkyCheckbox.checked() ? 40 : 2;
-                let torusDetailY = 40;
+                let torusDetailY = 2;
                 let torusCount = ringsSlider.value();
                 if (torusCount >= 1) {
                     pg.torus(globeDiameter + 40, 15, 32, torusDetailY);

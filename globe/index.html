@@ -56,7 +56,7 @@
                 pg.rotateY(frameCount * 0.01);
 
                 pg.push();
-                pg.fill(color(255, 255, 255));
+                pg.fill(color(0, 0, 0));
                 let globeDiameter = globeDiameterSlider.value();
                 pg.sphere(globeDiameter);
                 pg.pop();
@@ -65,7 +65,7 @@
                 pg.rotateX(0);
                 pg.rotateY(0);
                 pg.rotateZ(0);
-                pg.fill(255, 255, 255);
+                pg.fill(color(255, 255, 255));
                 pg.rotateX(1.5708);
                 // let torusDetailY = chunkyCheckbox.checked() ? 40 : 2;
                 let torusDetailY = 2;
@@ -85,7 +85,7 @@
                 pg.pop();
 
                 pg.pop();
-                pointLight(250, 250, 250, width/2, height/2, 50);
+                pg.pointLight(250, 250, 250, width/2, height/2, 50);
                 noStroke();
                 sphere(40);
                 shader(camShader);

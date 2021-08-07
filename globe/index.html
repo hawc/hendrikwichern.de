@@ -52,7 +52,7 @@
                 pg.rotateZ(0);
                 pg.fill(255, 255, 255);
                 pg.rotateX(1.5708);
-                let torusDetailY = chunkyCheckbox ? 40 : 2;
+                let torusDetailY = chunkyCheckbox.checked() ? 40 : 2;
                 pg.torus(globeDiameter + 40, 15, 32, torusDetailY);
                 pg.torus(globeDiameter + 90, 3, 32, torusDetailY);
                 pg.torus(globeDiameter + 110, 4, 32, torusDetailY);

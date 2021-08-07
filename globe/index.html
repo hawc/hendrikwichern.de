@@ -12,12 +12,16 @@
         </style>
         <script>
             let camShader;
+            let slider;
 
             function preload() {
                 // load the shader
                 camShader = loadShader('./p5assets/treshold.vert', './p5assets/treshold.frag');
             }
             function setup() {
+                slider = createSlider(0, 255, 100);
+                slider.position(10, 10);
+                slider.style('width', '80px');
                 pixelDensity(0.25);
                 createCanvas(800, 800, WEBGL);
                 pg = createGraphics(800, 800, WEBGL);
@@ -30,13 +34,13 @@
 
                 pg.push();
                 pg.rotateY(frameCount * 0.015);
-                pg.rotateZ(0.2);
-                pg.rotateX(-0.5);
+                pg.rotateZ(0.25);
+                pg.rotateX(-0.25);
                 pg.rotateY(frameCount * 0.01);
 
                 pg.push();
                 pg.fill(color(255, 255, 255));
-                pg.sphere(100);
+                pg.sphere(slider.value());
                 pg.pop();
 
                 pg.push();

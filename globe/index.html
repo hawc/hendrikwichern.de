@@ -20,34 +20,36 @@
             function setup() {
                 //pixelDensity(0.25);
                 createCanvas(600, 600, WEBGL);
+                pg = createGraphics(600, 600);
             }
 
             function draw() {
                 shader(camShader);
-                background(0, 0, 0);
-                noStroke();
+                camShader.setUniform('tex0', pg);
+                pg.background(0, 0, 0);
+                pg.noStroke();
 
-                push();
-                rotateY(frameCount * 0.015);
-                rotateZ(0.25);
-                rotateX(-0.5);
-                rotateY(frameCount * 0.01);
+                pg.push();
+                pg.rotateY(frameCount * 0.015);
+                pg.rotateZ(0.25);
+                pg.rotateX(-0.5);
+                pg.rotateY(frameCount * 0.01);
 
-                push();
-                fill(color(255, 255, 255));
-                sphere(100);
-                pop();
+                pg.push();
+                pg.fill(color(255, 255, 255));
+                pg.sphere(100);
+                pg.pop();
 
-                push();
-                rotateX(0);
-                rotateY(0);
-                rotateZ(0);
-                fill(255, 255, 255);
-                rotateX(1.5708);
-                torus(130, 15, 32, 40);
-                pop();
+                pg.push();
+                pg.rotateX(0);
+                pg.rotateY(0);
+                pg.rotateZ(0);
+                pg.fill(255, 255, 255);
+                pg.rotateX(1.5708);
+                pg.torus(130, 15, 32, 40);
+                pg.pop();
 
-                pop();
+                pg.pop();
             }
 
         </script>

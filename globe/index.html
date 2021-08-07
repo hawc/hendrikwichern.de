@@ -49,11 +49,11 @@
                 pg.pop();
 
                 pg.pop();
-                 shader(camShader);
-                 camShader.setUniform('tex0', pg);
-                 camShader.setUniform('mouseX', mouseX / width);
+                shader(camShader);
+                camShader.setUniform('tex0', image(pg, 600, 600));
+                camShader.setUniform('mouseX', mouseX / width);
                 //rect(0, 0, width, height);
-                image(pg, 600, 600);
+                
             }
 
         </script>

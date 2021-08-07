@@ -13,6 +13,7 @@
         <script>
             let camShader;
             let slider;
+            let chunkyCheckbox;
 
             function preload() {
                 // load the shader
@@ -22,6 +23,7 @@
                 slider = createSlider(0, 200, 80);
                 slider.position(10, 10);
                 slider.style('width', '80px');
+                chunkyCheckbox = createCheckbox('is chunky', false);
                 pixelDensity(0.25);
                 createCanvas(800, 800, WEBGL);
                 pg = createGraphics(800, 800, WEBGL);
@@ -50,9 +52,10 @@
                 pg.rotateZ(0);
                 pg.fill(255, 255, 255);
                 pg.rotateX(1.5708);
-                pg.torus(globeDiameter + 40, 15, 32, 2);
-                pg.torus(globeDiameter + 90, 3, 32, 2);
-                pg.torus(globeDiameter + 110, 4, 32, 2);
+                let torusDetailY = chunkyCheckbox ? 40 : 2;
+                pg.torus(globeDiameter + 40, 15, 32, torusDetailY);
+                pg.torus(globeDiameter + 90, 3, 32, torusDetailY);
+                pg.torus(globeDiameter + 110, 4, 32, torusDetailY);
                 pg.pop();
 
                 pg.pop();

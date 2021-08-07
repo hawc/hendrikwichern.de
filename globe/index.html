@@ -47,9 +47,8 @@
             function draw() {
                 pg.clear();
                 pg.background(0, 0, 0);
-                let locX = mouseX - width / 2;
-                let locY = mouseY - height / 2;
-                console.log(locX);
+                // let locX = mouseX - width / 2;
+                // let locY = mouseY - height / 2;
                 pg.noStroke();
                 pg.fill(color(255, 255, 255));
 
@@ -61,7 +60,7 @@
 
                 pg.push();
                 let globeDiameter = globeDiameterSlider.value();
-                pg.pointLight(255, 255, 255, -locX, locY, 550);
+                // pg.pointLight(255, 255, 255, -locX, locY, 550);
                 pg.sphere(globeDiameter);
                 pg.pop();
 

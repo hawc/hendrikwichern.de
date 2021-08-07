@@ -59,7 +59,7 @@
                 pg.rotateY(frameCount * 0.01);
 
                 pg.push();
-                pg.fill(color(0, 0, 0));
+                pg.fill(0, 0, 0);
                 let globeDiameter = globeDiameterSlider.value();
                 pg.sphere(globeDiameter);
                 pg.pop();
@@ -68,7 +68,7 @@
                 pg.rotateX(0);
                 pg.rotateY(0);
                 pg.rotateZ(0);
-                pg.fill(color(0, 0, 0));
+                pg.fill(0, 0, 0);
                 pg.rotateX(1.5708);
                 // let torusDetailY = chunkyCheckbox.checked() ? 40 : 2;
                 let torusDetailY = 2;

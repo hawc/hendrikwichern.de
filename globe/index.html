@@ -40,7 +40,8 @@
 
                 pg.push();
                 pg.fill(color(255, 255, 255));
-                pg.sphere(slider.value());
+                let globeDiameter = slider.value();
+                pg.sphere(globeDiameter);
                 pg.pop();
 
                 pg.push();
@@ -49,9 +50,9 @@
                 pg.rotateZ(0);
                 pg.fill(255, 255, 255);
                 pg.rotateX(1.5708);
-                pg.torus(140, 15, 32, 2);
-                pg.torus(190, 2, 32, 2);
-                pg.torus(200, 3, 32, 2);
+                pg.torus(globeDiameter + 40, 15, 32, 2);
+                pg.torus(globeDiameter + 90, 2, 32, 2);
+                pg.torus(globeDiameter + 00, 3, 32, 2);
                 pg.pop();
 
                 pg.pop();

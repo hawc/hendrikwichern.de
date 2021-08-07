@@ -24,8 +24,6 @@
             }
 
             function draw() {
-                shader(camShader);
-                camShader.setUniform('tex0', pg);
                 pg.background(0, 0, 0);
                 pg.noStroke();
 
@@ -50,6 +48,10 @@
                 pg.pop();
 
                 pg.pop();
+                shader(camShader);
+                camShader.setUniform('tex0', pg);
+                camShader.setUniform('mouseX', mouseX / width);
+                rect(0, 0, width, height);
             }
 
         </script>

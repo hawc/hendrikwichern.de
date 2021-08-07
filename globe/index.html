@@ -11,38 +11,44 @@
             }
         </style>
         <script>
+            let camShader;
+
+            function preload() {
+                // load the shader
+                camShader = loadShader('./p5assets/effect.vert', './p5assets/effect.frag');
+            }
             function setup() {
-                    //pixelDensity(0.25);
-                    createCanvas(600, 600, WEBGL);
-                }
+                //pixelDensity(0.25);
+                createCanvas(600, 600, WEBGL);
+            }
 
-                function draw() {
-                    background(0, 0, 0);
-                    noStroke();
+            function draw() {
+                shader(camShader);
+                background(0, 0, 0);
+                noStroke();
 
-                    push();
-                    rotateY(frameCount * 0.015);
-                    rotateZ(0.25);
-                    rotateX(-0.5);
-                    rotateY(frameCount * 0.01);
+                push();
+                rotateY(frameCount * 0.015);
+                rotateZ(0.25);
+                rotateX(-0.5);
+                rotateY(frameCount * 0.01);
 
-                    push();
-                    fill(color(255, 255, 255));
-                    sphere(100);
-                    pop();
+                push();
+                fill(color(255, 255, 255));
+                sphere(100);
+                pop();
 
-                    push();
-                    rotateX(0);
-                    rotateY(0);
-                    rotateZ(0);
-                    fill(255, 255, 255);
-                    rotateX(1.5708);
-                    torus(130, 15, 32, 40);
-                    pop();
+                push();
+                rotateX(0);
+                rotateY(0);
+                rotateZ(0);
+                fill(255, 255, 255);
+                rotateX(1.5708);
+                torus(130, 15, 32, 40);
+                pop();
 
-                    pop();
-                    filter(TRESHOLD);
-                }
+                pop();
+            }
 
         </script>
     </head>

@@ -45,14 +45,14 @@
                 pg.rotateZ(0);
                 pg.fill(255, 255, 255);
                 pg.rotateX(1.5708);
-                pg.torus(130, 15, 32, 2);
-                pg.torus(200, 5, 32, 2);
+                pg.torus(140, 15, 32, 2);
+                pg.torus(190, 3, 32, 2);
+                pg.torus(200, 7, 32, 2);
                 pg.pop();
 
                 pg.pop();
                 shader(camShader);
                 camShader.setUniform('tex0', pg);
-                camShader.setUniform('mouseX', mouseX / width);
                 rect(0, 0, width, height);
             }
 

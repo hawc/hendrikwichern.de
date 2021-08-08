@@ -34,16 +34,17 @@
                 'mercury',
                 'venus',
                 'earth',
+                'moon',
                 'mars',
             ];
             let loadedTextures = [];
-            let chunkyCheckbox;
+            // let chunkyCheckbox;
 
             function preload() {
                 camShader = loadShader('./p5assets/treshold.vert', './p5assets/treshold.frag');
             }
             function setup() {
-                globeDiameterSlider = createSlider(0, 180, 60);
+                globeDiameterSlider = createSlider(0, 170, 60);
                 globeDiameterSlider.position(10, 10);
                 globeDiameterSlider.style('width', '80px');
                 ringsSlider = createSlider(0, 5, 1);
@@ -61,7 +62,7 @@
                 thresholdSlider = createSlider(0.1, 1, 0.5, 0.01);
                 thresholdSlider.position(10, 110);
                 thresholdSlider.style('width', '80px');
-                chunkyCheckbox = createCheckbox('is chunky', false);
+                // chunkyCheckbox = createCheckbox('is chunky', false);
 
                 textures.forEach(texture => {
                     loadedTextures.push(loadImage('textures/' + texture + '.jpg'));
@@ -97,8 +98,8 @@
                 pg.rotateY(0);
                 pg.rotateZ(0);
                 pg.rotateX(1.5708);
-                let torusDetailY = chunkyCheckbox.checked() ? 40 : 2;
-                // let torusDetailY = 2;
+                // let torusDetailY = chunkyCheckbox.checked() ? 40 : 2;
+                let torusDetailY = 2;
                 let torusCount = ringsSlider.value();
                 let ringsDiameter = ringsDiameterSlider.value();
                 let ringsDistance = ringsDistanceSlider.value();

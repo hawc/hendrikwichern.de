@@ -27,6 +27,13 @@
             let globeDiameterSlider;
             let ringsSlider;
             let thresholdSlider;
+            let textureSlider;
+            const textures = [
+                'mercury',
+                'venus',
+                'earth',
+                'mars',
+            ];
             // let chunkyCheckbox;
 
             function preload() {
@@ -40,8 +47,11 @@
                 ringsSlider = createSlider(0, 5, 1);
                 ringsSlider.position(10, 30);
                 ringsSlider.style('width', '80px');
+                textureSlider = createSlider(0, textures.length, textures.indexOf('earth'), 1);
+                textureSlider.position(10, 50);
+                textureSlider.style('width', '80px');
                 thresholdSlider = createSlider(0, 1, 0.5, 0.01);
-                thresholdSlider.position(10, 50);
+                thresholdSlider.position(10, 70);
                 thresholdSlider.style('width', '80px');
                 // chunkyCheckbox = createCheckbox('is chunky', false);
                 pixelDensity(0.25);
@@ -66,7 +76,7 @@
                 pg.push();
                 let globeDiameter = globeDiameterSlider.value();
                 // pg.pointLight(255, 255, 255, -locX, locY, 550);
-                pg.texture(planetTexture);
+                pg.texture(textures[textureSlider.value()]);
                 pg.sphere(globeDiameter);
                 pg.pop();
 

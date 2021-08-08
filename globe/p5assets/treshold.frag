@@ -5,7 +5,7 @@ varying vec2 vTexCoord;
 
 // our texture coming from p5
 uniform sampler2D tex0;
-uniform float thresholdValue;
+uniform float tresholdValue;
 // uniform float mouseX;
 
 // this is a common glsl function of unknown origin to convert rgb colors to luminance
@@ -31,7 +31,7 @@ void main() {
   // here we will use the step function to convert the image into black or white
   // any color less than mouseX will become black, any color greater than mouseX will become white
   // float thresh = step(mouseX, gray);
-  float thresh = step(thresholdValue, gray);
+  float thresh = step(tresholdValue, gray);
 
   // output the threshold value in all three rgb color channels
   gl_FragColor = vec4(thresh, thresh, thresh, 1.0);

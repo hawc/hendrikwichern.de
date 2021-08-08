@@ -19,6 +19,14 @@
             canvas {
                 image-rendering: pixelated;
             }
+            main + div {
+                position: absolute;
+                /* transform: scale(1.5); */
+                top: 0;
+                left: 0;
+                width: 200px;
+                transform-origin: top left;
+            }
         </style>
         <script>
             let planetTexture;
@@ -49,22 +57,22 @@
                 createSpan('rings distance').position(10, 70).parent(root);
                 createSpan('texture').position(10, 90).parent(root);
                 createSpan('lightness').position(10, 110).parent(root);
-                globeDiameterSlider = createSlider(0, 170, 110);
+                globeDiameterSlider = createSlider(0, 170, 110).parent(root);
                 globeDiameterSlider.position(140, 10);
                 globeDiameterSlider.style('width', '80px');
                 ringsSlider = createSlider(0, 5, 0);
                 ringsSlider.position(140, 30);
                 ringsSlider.style('width', '80px');
-                ringsDiameterSlider = createSlider(0, 20, 1);
+                ringsDiameterSlider = createSlider(0, 20, 1).parent(root);
                 ringsDiameterSlider.position(140, 50);
                 ringsDiameterSlider.style('width', '80px');
-                ringsDistanceSlider = createSlider(0, 30, 10);
+                ringsDistanceSlider = createSlider(0, 30, 10).parent(root);
                 ringsDistanceSlider.position(140, 70);
                 ringsDistanceSlider.style('width', '80px');
-                textureSlider = createSlider(0, textures.length - 1, textures.indexOf('earth'), 1);
+                textureSlider = createSlider(0, textures.length - 1, textures.indexOf('earth'), 1).parent(root);
                 textureSlider.position(140, 90);
                 textureSlider.style('width', '80px');
-                tresholdSlider = createSlider(0.1, 1, 0.35, 0.01);
+                tresholdSlider = createSlider(0.1, 1, 0.35, 0.01).parent(root);
                 tresholdSlider.position(140, 110);
                 tresholdSlider.style('width', '80px');
 

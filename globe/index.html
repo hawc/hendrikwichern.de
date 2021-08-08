@@ -11,13 +11,20 @@
             body {
                 width: 100vw;
                 height: 100vh;
+                position: relative;
                 text-align: center;
                 background: black;
                 color: white;
                 font-family: Helvetica, Arial, sans-serif;
             }
             canvas {
+                position: absolute;
                 image-rendering: pixelated;
+                width: min(100vw, 100vh);
+                height: min(100vw, 100vh);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
             .root {
                 position: absolute;

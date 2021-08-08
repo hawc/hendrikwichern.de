@@ -19,13 +19,17 @@
             canvas {
                 image-rendering: pixelated;
             }
-            main + div {
+            .root {
                 position: absolute;
-                /* transform: scale(1.5); */
                 top: 0;
                 left: 0;
                 width: 200px;
                 transform-origin: top left;
+            }
+            @media only screen and (max-width: 767px) {
+                .root {
+                    transform: scale(1.5);
+                }
             }
         </style>
         <script>
@@ -50,7 +54,7 @@
                 camShader = loadShader('./p5assets/treshold.vert', './p5assets/treshold.frag');
             }
             function setup() {
-                let root = createDiv('this is the parent');
+                let root = createDiv().class('root');
                 createSpan('globe diameter').position(10, 10).parent(root);
                 createSpan('rings count').position(10, 30).parent(root);
                 createSpan('rings diameter').position(10, 50).parent(root);
@@ -60,7 +64,7 @@
                 globeDiameterSlider = createSlider(0, 170, 110).parent(root);
                 globeDiameterSlider.position(140, 10);
                 globeDiameterSlider.style('width', '80px');
-                ringsSlider = createSlider(0, 5, 0);
+                ringsSlider = createSlider(0, 5, 0).parent(root);
                 ringsSlider.position(140, 30);
                 ringsSlider.style('width', '80px');
                 ringsDiameterSlider = createSlider(0, 20, 1).parent(root);

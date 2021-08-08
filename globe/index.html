@@ -44,12 +44,13 @@
             }
             function setup() {
                 textSize(16);
-                text('globe diameter', 10, 10);
-                text('rings count', 10, 30);
-                text('rings diameter', 10, 50);
-                text('rings distance', 10, 70);
-                text('texture', 10, 90);
-                text('treshold', 10, 110);
+                fill(255, 255, 255);
+                createSpan('globe diameter').position(10, 10);
+                createSpan('rings count').position(10, 30);
+                createSpan('rings diameter').position(10, 50);
+                createSpan('rings distance').position(10, 70);
+                createSpan('texture').position(10, 90);
+                createSpan('treshold').position(10, 110);
                 globeDiameterSlider = createSlider(0, 170, 95);
                 globeDiameterSlider.position(140, 10);
                 globeDiameterSlider.style('width', '80px');

@@ -37,7 +37,6 @@
             // let chunkyCheckbox;
 
             function preload() {
-                planetTexture = loadImage('textures/earth.jpg');
                 camShader = loadShader('./p5assets/treshold.vert', './p5assets/treshold.frag');
             }
             function setup() {
@@ -47,7 +46,6 @@
                 ringsSlider = createSlider(0, 5, 1);
                 ringsSlider.position(10, 30);
                 ringsSlider.style('width', '80px');
-                console.log(0, textures.length, textures.indexOf('earth'), 1);
                 textureSlider = createSlider(0, textures.length, textures.indexOf('earth'), 1);
                 textureSlider.position(10, 50);
                 textureSlider.style('width', '80px');
@@ -77,7 +75,8 @@
                 pg.push();
                 let globeDiameter = globeDiameterSlider.value();
                 // pg.pointLight(255, 255, 255, -locX, locY, 550);
-                pg.texture(textures[textureSlider.value()]);
+                planetTexture = loadImage('textures/' + textures[textureSlider.value()] + '.jpg');
+                pg.texture(planetTexture);
                 pg.sphere(globeDiameter);
                 pg.pop();
 

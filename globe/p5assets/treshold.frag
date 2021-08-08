@@ -20,7 +20,7 @@ void main() {
 
   vec2 uv = vTexCoord;
   // the texture is loaded upside down and backwards by default so lets flip it
-  // uv = 1.0 - uv;
+  uv = 1.0 - uv;
 
   // get the webcam as a vec4 using texture2D
   vec4 tex = texture2D(tex0, uv);

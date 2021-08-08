@@ -34,6 +34,7 @@
                 'earth',
                 'mars',
             ];
+            let loadedTextures = [];
             // let chunkyCheckbox;
 
             function preload() {
@@ -53,6 +54,10 @@
                 thresholdSlider.position(10, 70);
                 thresholdSlider.style('width', '80px');
                 // chunkyCheckbox = createCheckbox('is chunky', false);
+
+                textures.forEach(texture => {
+                    loadedTextures.push(loadImage('textures/' + texture + '.jpg'));
+                });
                 pixelDensity(0.25);
                 createCanvas(800, 800, WEBGL);
                 pg = createGraphics(800, 800, WEBGL);
@@ -75,8 +80,7 @@
                 pg.push();
                 let globeDiameter = globeDiameterSlider.value();
                 // pg.pointLight(255, 255, 255, -locX, locY, 550);
-                planetTexture = loadImage('textures/' + textures[textureSlider.value()] + '.jpg');
-                pg.texture(planetTexture);
+                pg.texture(loadedTextures[textureSlider.value()]);
                 pg.sphere(globeDiameter);
                 pg.pop();
 

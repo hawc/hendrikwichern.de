@@ -17,10 +17,7 @@
                 font-family: Helvetica, Arial, sans-serif;
             }
             canvas {
-                image-rendering: -moz-crisp-edges;
-                image-rendering: -webkit-crisp-edges;
                 image-rendering: pixelated;
-                image-rendering: crisp-edges;
             }
         </style>
         <script>
@@ -51,10 +48,10 @@
                 createSpan('rings distance').position(10, 70);
                 createSpan('texture').position(10, 90);
                 createSpan('treshold').position(10, 110);
-                globeDiameterSlider = createSlider(0, 170, 95);
+                globeDiameterSlider = createSlider(0, 170, 110);
                 globeDiameterSlider.position(140, 10);
                 globeDiameterSlider.style('width', '80px');
-                ringsSlider = createSlider(0, 5, 1);
+                ringsSlider = createSlider(0, 5, 0);
                 ringsSlider.position(140, 30);
                 ringsSlider.style('width', '80px');
                 ringsDiameterSlider = createSlider(0, 20, 1);

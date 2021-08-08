@@ -26,6 +26,7 @@
             let camShader;
             let globeDiameterSlider;
             let ringsSlider;
+            let ringsDistanceSlider;
             let thresholdSlider;
             let textureSlider;
             const textures = [
@@ -47,11 +48,14 @@
                 ringsSlider = createSlider(0, 5, 1);
                 ringsSlider.position(10, 30);
                 ringsSlider.style('width', '80px');
+                ringsDistanceSlider = createSlider(0, 15, 1);
+                ringsDistanceSlider.position(10, 50);
+                ringsDistanceSlider.style('width', '80px');
                 textureSlider = createSlider(0, textures.length - 1, textures.indexOf('earth'), 1);
-                textureSlider.position(10, 50);
+                textureSlider.position(10, 70);
                 textureSlider.style('width', '80px');
                 thresholdSlider = createSlider(0, 1, 0.5, 0.01);
-                thresholdSlider.position(10, 70);
+                thresholdSlider.position(10, 90);
                 thresholdSlider.style('width', '80px');
                 // chunkyCheckbox = createCheckbox('is chunky', false);
 
@@ -92,17 +96,18 @@
                 // let torusDetailY = chunkyCheckbox.checked() ? 40 : 2;
                 let torusDetailY = 2;
                 let torusCount = ringsSlider.value();
+                let ringsDistance = ringsDistanceSlider.value();
                 if (torusCount >= 1) {
-                    pg.torus(globeDiameter + 40, 15, 32, torusDetailY);
+                    pg.torus(globeDiameter + 40, 15 + ringsDistance, 32, torusDetailY);
                 }
                 if (torusCount >= 2) {
-                    pg.torus(globeDiameter + 90, 3, 32, torusDetailY);
+                    pg.torus(globeDiameter + 90, 3 + ringsDistance, 32, torusDetailY);
                 }
                 if (torusCount >= 3) {
-                    pg.torus(globeDiameter + 110, 4, 32, torusDetailY);
+                    pg.torus(globeDiameter + 110, 4 + ringsDistance, 32, torusDetailY);
                 }
                 if (torusCount >= 4) {
-                    pg.torus(globeDiameter + 130, 10, 32, torusDetailY);
+                    pg.torus(globeDiameter + 130, 10 + ringsDistance, 32, torusDetailY);
                 }
                 pg.pop();
 

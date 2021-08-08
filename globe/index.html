@@ -42,12 +42,13 @@
                 camShader = loadShader('./p5assets/treshold.vert', './p5assets/treshold.frag');
             }
             function setup() {
-                createSpan('globe diameter').position(10, 10);
-                createSpan('rings count').position(10, 30);
-                createSpan('rings diameter').position(10, 50);
-                createSpan('rings distance').position(10, 70);
-                createSpan('texture').position(10, 90);
-                createSpan('lightness').position(10, 110);
+                let root = createDiv('this is the parent');
+                createSpan('globe diameter').position(10, 10).parent(root);
+                createSpan('rings count').position(10, 30).parent(root);
+                createSpan('rings diameter').position(10, 50).parent(root);
+                createSpan('rings distance').position(10, 70).parent(root);
+                createSpan('texture').position(10, 90).parent(root);
+                createSpan('lightness').position(10, 110).parent(root);
                 globeDiameterSlider = createSlider(0, 170, 110);
                 globeDiameterSlider.position(140, 10);
                 globeDiameterSlider.style('width', '80px');

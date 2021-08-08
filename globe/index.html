@@ -22,13 +22,14 @@
             }
         </style>
         <script>
+            let planetTexture;
             let camShader;
             let globeDiameterSlider;
             let ringsSlider;
             // let chunkyCheckbox;
 
             function preload() {
-                // load the shader
+                planetTexture = loadImage('textures/earth.jpg');
                 camShader = loadShader('./p5assets/treshold.vert', './p5assets/treshold.frag');
             }
             function setup() {
@@ -61,6 +62,7 @@
                 pg.push();
                 let globeDiameter = globeDiameterSlider.value();
                 // pg.pointLight(255, 255, 255, -locX, locY, 550);
+                pg.texture(planetTexture);
                 pg.sphere(globeDiameter);
                 pg.pop();
 

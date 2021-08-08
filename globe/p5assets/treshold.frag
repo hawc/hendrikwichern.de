@@ -6,7 +6,7 @@ varying vec2 vTexCoord;
 // our texture coming from p5
 uniform sampler2D tex0;
 uniform float thresholdValue;
-// uniform int mouseX;
+// uniform float mouseX;
 
 // this is a common glsl function of unknown origin to convert rgb colors to luminance
 // it performs a dot product of the input color against some known values that account for our eyes perception of brighness

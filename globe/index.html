@@ -13,6 +13,8 @@
                 height: 100vh;
                 text-align: center;
                 background: black;
+                color: white;
+                font-family: Helvetica, Arial, sans-serif;
             }
             canvas {
                 image-rendering: -moz-crisp-edges;
@@ -43,8 +45,6 @@
                 camShader = loadShader('./p5assets/treshold.vert', './p5assets/treshold.frag');
             }
             function setup() {
-                textSize(16);
-                fill(255, 255, 255);
                 createSpan('globe diameter').position(10, 10);
                 createSpan('rings count').position(10, 30);
                 createSpan('rings diameter').position(10, 50);

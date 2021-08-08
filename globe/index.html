@@ -38,7 +38,6 @@
                 'mars',
             ];
             let loadedTextures = [];
-            // let chunkyCheckbox;
 
             function preload() {
                 camShader = loadShader('./p5assets/treshold.vert', './p5assets/treshold.frag');
@@ -62,7 +61,6 @@
                 thresholdSlider = createSlider(0.1, 1, 0.5, 0.01);
                 thresholdSlider.position(10, 110);
                 thresholdSlider.style('width', '80px');
-                // chunkyCheckbox = createCheckbox('is chunky', false);
 
                 textures.forEach(texture => {
                     loadedTextures.push(loadImage('textures/' + texture + '.jpg'));
@@ -98,7 +96,6 @@
                 pg.rotateY(0);
                 pg.rotateZ(0);
                 pg.rotateX(1.5708);
-                // let torusDetailY = chunkyCheckbox.checked() ? 40 : 2;
                 let torusDetailY = 2;
                 let torusCount = ringsSlider.value();
                 let ringsDiameter = ringsDiameterSlider.value();

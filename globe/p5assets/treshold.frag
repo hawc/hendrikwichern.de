@@ -25,6 +25,12 @@ void main() {
   // get the webcam as a vec4 using texture2D
   vec4 tex = texture2D(tex0, uv);
 
+  float alpha;
+  if(tex.r == 1) {
+      alpha = 0;
+    } else {
+      alpha = 1;
+    }
   // convert the texture to grayscale by using the luma function  
   float gray = luma(tex.rgb);
 
@@ -34,5 +40,5 @@ void main() {
   float thresh = step(tresholdValue, gray);
 
   // output the threshold value in all three rgb color channels
-  gl_FragColor = vec4(thresh, thresh, thresh, 0.5);
+  gl_FragColor = vec4(thresh, thresh, thresh, alpha);
 }

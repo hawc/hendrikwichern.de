@@ -25,8 +25,8 @@ void main() {
   // get the webcam as a vec4 using texture2D
   vec4 tex = texture2D(tex0, uv);
 
-  float alpha;
-  if(tex.r == 1) {
+  float alpha = 1;
+  if(tex.r == alpha) {
       alpha = 0;
     } else {
       alpha = 1;

@@ -25,11 +25,11 @@ void main() {
   // get the webcam as a vec4 using texture2D
   vec4 tex = texture2D(tex0, uv);
 
-  float alpha = 1;
+  float alpha = 1.0;
   if(tex.r == alpha) {
-      alpha = 0;
+      alpha = 0.0;
     } else {
-      alpha = 1;
+      alpha = 1.0;
     }
   // convert the texture to grayscale by using the luma function  
   float gray = luma(tex.rgb);

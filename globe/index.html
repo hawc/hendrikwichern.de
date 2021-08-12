@@ -148,6 +148,14 @@
                 camShader.setUniform('tresholdValue', tresholdSlider.value());
                 rect(0, 0, width, height);
             }
+
+            function mouseClicked() {
+                if (isLooping()) {
+                    noLoop();
+                } else {
+                    loop();
+                }
+            }
         </script>
     </head>
     <body>

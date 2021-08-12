@@ -27,10 +27,9 @@ void main() {
 
   float fullcolor = 1.0;
   float nocolor = 0.0;
+  float alpha = fullcolor;
   if(tex.r == fullcolor && tex.g == nocolor && tex.b == nocolor) {
       alpha = nocolor;
-    } else {
-      alpha = fullcolor;
     }
   // convert the texture to grayscale by using the luma function  
   float gray = luma(tex.rgb);

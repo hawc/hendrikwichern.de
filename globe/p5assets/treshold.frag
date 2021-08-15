@@ -40,5 +40,5 @@ void main() {
   float thresh = step(tresholdValue, gray);
 
   // output the threshold value in all three rgb color channels
-  gl_FragColor = vec4(255 - thresh, thresh, thresh, alpha);
+  gl_FragColor = vec4(fullcolor - thresh, thresh, thresh, alpha);
 }

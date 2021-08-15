@@ -153,9 +153,8 @@
                 camShader.setUniform('tresholdValue', tresholdSlider.value());
                 rect(0, 0, width, height);
             }
-
             function keyPressed() {
-                if (isLooping()) {
+                if (keyCode === 32 && isLooping()) {
                     noLoop();
                 } else {
                     loop();

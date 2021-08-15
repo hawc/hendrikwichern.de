@@ -13,7 +13,7 @@
                 height: 100vh;
                 position: relative;
                 text-align: center;
-                background: rgb(19, 15, 41);
+                background: #0f1020;
                 color: white;
                 font-family: Helvetica, Arial, sans-serif;
             }
@@ -54,14 +54,14 @@
             const textures = [
                 'mercury',
                 'venus',
-                'earth-bw',
+                'earth',
                 'moon',
                 'mars',
             ];
             let loadedTextures = [];
 
             function preload() {
-                camShader = loadShader('./p5assets/treshold.vert', './p5assets/treshold.frag');
+                camShader = loadShader('/globe/p5assets/treshold.vert', '/globe/p5assets/treshold.frag');
             }
             function setup() {
                 let root = createDiv().class('root');
@@ -71,6 +71,7 @@
                 createSpan('rings distance').position(10, 70).parent(root);
                 createSpan('texture').position(10, 90).parent(root);
                 createSpan('lightness').position(10, 110).parent(root);
+                createSpan('monotone').position(10, 130).parent(root);
                 globeDiameterSlider = createSlider(0, 170, 110).parent(root);
                 globeDiameterSlider.position(140, 10);
                 globeDiameterSlider.style('width', '80px');
@@ -86,12 +87,15 @@
                 textureSlider = createSlider(0, textures.length - 1, textures.indexOf('earth'), 1).parent(root);
                 textureSlider.position(140, 90);
                 textureSlider.style('width', '80px');
-                tresholdSlider = createSlider(0.1, 1, 0.35, 0.01).parent(root);
+                tresholdSlider = createSlider(0.1, 0.5, 0.35, 0.01).parent(root);
                 tresholdSlider.position(140, 110);
                 tresholdSlider.style('width', '80px');
+                monotoneCheckbox = createCheckbox('', true).parent(root);
+                monotoneCheckbox.position(140, 130);
+                monotoneCheckbox.style('width', '80px');
 
                 textures.forEach(texture => {
-                    loadedTextures.push(loadImage('textures/' + texture + '.jpg'));
+                    loadedTextures.push(loadImage('/globe/textures/' + texture + '.jpg'));
                 });
                 pixelDensity(window.devicePixelRatio * 0.125);
                 createCanvas(800, 800, WEBGL);
@@ -144,6 +148,7 @@
 
                 pg.pop();
                 shader(camShader);
+                camShader.setUniform('monotone', monotoneCheckbox.checked() ? 1.0 : 0.0);
                 camShader.setUniform('tex0', pg);
                 camShader.setUniform('tresholdValue', tresholdSlider.value());
                 rect(0, 0, width, height);

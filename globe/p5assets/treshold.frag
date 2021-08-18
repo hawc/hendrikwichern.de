@@ -29,6 +29,7 @@ void main() {
   float fullcolor = 1.0;
   float nocolor = 0.0;
   float alpha = fullcolor;
+  // if the current pixel is 100% red, the alpha channel is set to 100%
   if(tex.r == fullcolor && tex.g == nocolor && tex.b == nocolor) {
       alpha = nocolor;
     }
@@ -45,6 +46,7 @@ void main() {
     float thresh = smoothstep(tresholdValue, 1.0 - tresholdValue, gray);
 
     // output the threshold value in all three rgb color channels
+
     if(thresh == fullcolor) {
       gl_FragColor = vec4(0.98, 0.65, 1.0, alpha);
     } else if(thresh > 0.33) {

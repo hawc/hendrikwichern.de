@@ -59,6 +59,7 @@
                 'mars',
             ];
             let loadedTextures = [];
+            let loadedRingsTexture;
 
             function preload() {
                 camShader = loadShader('/globe/p5assets/treshold.vert', '/globe/p5assets/treshold.frag');
@@ -81,7 +82,7 @@
                 ringsDiameterSlider = createSlider(0, 20, 1).parent(root);
                 ringsDiameterSlider.position(140, 50);
                 ringsDiameterSlider.style('width', '80px');
-                ringsDistanceSlider = createSlider(0, 30, 10).parent(root);
+                ringsDistanceSlider = createSlider(0, 50, 10).parent(root);
                 ringsDistanceSlider.position(140, 70);
                 ringsDistanceSlider.style('width', '80px');
                 textureSlider = createSlider(0, textures.length - 1, textures.indexOf('earth'), 1).parent(root);
@@ -97,6 +98,8 @@
                 textures.forEach(texture => {
                     loadedTextures.push(loadImage('/globe/textures/' + texture + '.jpg'));
                 });
+                loadedRingsTexture = loadImage('/globe/textures/2d.png');
+
                 pixelDensity(window.devicePixelRatio * 0.125);
                 createCanvas(800, 800, WEBGL);
                 pg = createGraphics(800, 800, WEBGL);
@@ -108,7 +111,8 @@
                 // let locX = mouseX - width / 2;
                 // let locY = mouseY - height / 2;
                 pg.noStroke();
-                pg.fill(color(255, 255, 255));
+                pg.fill(color(176, 176, 176));
+                pg.texture(loadedRingsTexture);
 
                 pg.push();
                 pg.rotateY(frameCount * 0.015);
@@ -132,17 +136,22 @@
                 let torusCount = ringsSlider.value();
                 let ringsDiameter = ringsDiameterSlider.value();
                 let ringsDistance = ringsDistanceSlider.value();
+                let ringBefore = 0;
                 if (torusCount >= 1) {
-                    pg.torus(ringsDistance + globeDiameter + 30, 12 + ringsDiameter, 32, torusDetailY);
+                    ringBefore = ringsDistance + globeDiameter + 30, 12 + ringsDiameter;
+                    pg.torus(ringBefore, 4 + ringsDiameter, 32, torusDetailY);
                 }
                 if (torusCount >= 2) {
-                    pg.torus(ringsDistance + globeDiameter + 80,  ringsDiameter, 32, torusDetailY);
+                    ringBefore = ringBefore + 20 + (ringsDiameter*2);
+                    pg.torus(ringBefore, ringsDiameter, 32, torusDetailY);
                 }
                 if (torusCount >= 3) {
-                    pg.torus(ringsDistance + globeDiameter + 100, 1 + ringsDiameter, 32, torusDetailY);
+                    ringBefore = ringBefore + 50 + (ringsDiameter*2);
+                    pg.torus(ringBefore, 11 + ringsDiameter, 32, torusDetailY);
                 }
                 if (torusCount >= 4) {
-                    pg.torus(ringsDistance + globeDiameter + 120, 7 + ringsDiameter, 32, torusDetailY);
+                    ringBefore = ringBefore + 20 + (ringsDiameter*2);
+                    pg.torus(ringBefore, ringsDiameter/2, 32, torusDetailY);
                 }
                 pg.pop();
 

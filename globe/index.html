@@ -12,10 +12,32 @@
                 width: 100vw;
                 height: 100vh;
                 position: relative;
-                text-align: center;
                 background: #0f1020;
                 color: white;
                 font-family: Helvetica, Arial, sans-serif;
+            }
+            .controls {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 20px;
+            }
+            .controls > div {
+                height: 30px;
+            }
+            .controls label {
+                display: inline-block;
+                vertical-align: top;
+                width: 150px;
+                height: 30px;
+                line-height: 30px;
+            }
+            .controls input,
+            .controls select {
+                display: inline-block;
+                vertical-align: top;
+                width: 150px;
+                height: 30px;
             }
             canvas {
                 position: absolute;
@@ -49,8 +71,9 @@
             let ringsSlider;
             let ringsDiameterSlider;
             let ringsDistanceSlider;
-            let tresholdSlider;
-            let textureSlider;
+            let globeTextureSelect;
+            let lightnessSlider;
+            let monotoneCheckbox;
             const textures = [
                 'mercury',
                 'venus',
@@ -66,34 +89,13 @@
             }
             function setup() {
                 let root = createDiv().class('root');
-                createSpan('globe diameter').position(10, 10).parent(root);
-                createSpan('rings count').position(10, 30).parent(root);
-                createSpan('rings diameter').position(10, 50).parent(root);
-                createSpan('rings distance').position(10, 70).parent(root);
-                createSpan('texture').position(10, 90).parent(root);
-                createSpan('lightness').position(10, 110).parent(root);
-                createSpan('monotone').position(10, 130).parent(root);
-                globeDiameterSlider = createSlider(0, 170, 110).parent(root);
-                globeDiameterSlider.position(140, 10);
-                globeDiameterSlider.style('width', '80px');
-                ringsSlider = createSlider(0, 5, 0).parent(root);
-                ringsSlider.position(140, 30);
-                ringsSlider.style('width', '80px');
-                ringsDiameterSlider = createSlider(0, 20, 1).parent(root);
-                ringsDiameterSlider.position(140, 50);
-                ringsDiameterSlider.style('width', '80px');
-                ringsDistanceSlider = createSlider(0, 50, 10).parent(root);
-                ringsDistanceSlider.position(140, 70);
-                ringsDistanceSlider.style('width', '80px');
-                textureSlider = createSlider(0, textures.length - 1, textures.indexOf('earth'), 1).parent(root);
-                textureSlider.position(140, 90);
-                textureSlider.style('width', '80px');
-                tresholdSlider = createSlider(0.1, 0.5, 0.35, 0.01).parent(root);
-                tresholdSlider.position(140, 110);
-                tresholdSlider.style('width', '80px');
-                monotoneCheckbox = createCheckbox('', true).parent(root);
-                monotoneCheckbox.position(140, 130);
-                monotoneCheckbox.style('width', '80px');
+                globeDiameterSlider = document.querySelector('[data-control-globe-diameter]');
+                ringsSlider = document.querySelector('[data-control-rings-count]');
+                ringsDiameterSlider = document.querySelector('[data-control-rings-diameter]');
+                ringsDistanceSlider = document.querySelector('[data-control-rings-distance]');
+                globeTextureSelect = document.querySelector('[data-control-globe-texture]');
+                lightnessSlider = document.querySelector('[data-control-lightness]');
+                monotoneCheckbox = document.querySelector('[data-control-monotone]');
 
                 textures.forEach(texture => {
                     loadedTextures.push(loadImage('/globe/textures/' + texture + '.jpg'));
@@ -121,9 +123,10 @@
                 pg.rotateY(frameCount * 0.01);
 
                 pg.push();
-                let globeDiameter = globeDiameterSlider.value();
+                let globeDiameter = parseInt(globeDiameterSlider.value);
+                let globeTexture = globeTextureSelect.value;
                 // pg.pointLight(255, 255, 255, -locX, locY, 550);
-                pg.texture(loadedTextures[textureSlider.value()]);
+                pg.texture(loadedTextures[textures.indexOf(globeTexture)]);
                 pg.sphere(globeDiameter);
                 pg.pop();
 
@@ -133,12 +136,13 @@
                 pg.rotateZ(0);
                 pg.rotateX(1.5708);
                 let torusDetailY = 2;
-                let torusCount = ringsSlider.value();
-                let ringsDiameter = ringsDiameterSlider.value();
-                let ringsDistance = ringsDistanceSlider.value();
+                let torusCount = parseInt(ringsSlider.value);
+                let ringsDiameter = parseInt(ringsDiameterSlider.value);
+                let ringsDistance = parseInt(ringsDistanceSlider.value);
                 let ringBefore = 0;
                 if (torusCount >= 1) {
-                    ringBefore = ringsDistance + globeDiameter + 30, 12 + ringsDiameter;
+                    ringBefore = ringsDistance + globeDiameter + 30;
+                    console.log(ringBefore);
                     pg.torus(ringBefore, 4 + ringsDiameter, 32, torusDetailY);
                 }
                 if (torusCount >= 2) {
@@ -156,10 +160,11 @@
                 pg.pop();
 
                 pg.pop();
+                let treshold = parseFloat(lightnessSlider.value);
                 shader(camShader);
-                camShader.setUniform('monotone', monotoneCheckbox.checked() ? 1.0 : 0.0);
+                camShader.setUniform('monotone', monotoneCheckbox.checked ? 1.0 : 0.0);
                 camShader.setUniform('tex0', pg);
-                camShader.setUniform('tresholdValue', tresholdSlider.value());
+                camShader.setUniform('tresholdValue', treshold);
                 rect(0, 0, width, height);
             }
             function keyPressed() {
@@ -172,6 +177,42 @@
         </script>
     </head>
     <body>
-
+        <main></main>
+        <div class="controls">
+            <div>
+                <label for="controlGlobeDiameter">Globe Diameter</label>
+                <input id="controlGlobeDiameter" data-control-globe-diameter type="range" min="0" max="170" value="110">
+            </div>
+            <div>
+                <label for="controlRingsCount">Rings Count</label>
+                <input id="controlRingsCount" data-control-rings-count type="range" min="0" max="5" value="1">
+            </div>
+            <div>
+                <label for="controlRingsDiameter">Rings Diameter</label>
+                <input id="controlRingsDiameter" data-control-rings-diameter type="range" min="0" max="20" value="1">
+            </div>
+            <div>
+                <label for="controlRingsDistance">Rings Distance</label>
+                <input id="controlRingsDistance" data-control-rings-distance type="range" min="0" max="50" value="10">
+            </div>
+            <div>
+                <label for="controlGlobeTexture">Globe Texture</label>
+                <select id="controlGlobeTexture" data-control-globe-texture>
+                    <option value="mercury">Mercury</option>
+                    <option value="venus">Venus</option>
+                    <option value="earth" selected>Earth</option>
+                    <option value="moon">Moon</option>
+                    <option value="mars">Mars</option>
+                </select>
+            </div>
+            <div>
+                <label for="controlLightness">Lightness</label>
+                <input id="controlLightness" data-control-lightness type="range" min="0.1" max=".5" value=".35" step="0.01">
+            </div>
+            <div>
+                <label for="controlMonotone">Monotone</label>
+                <input id="controlMonotone" data-control-monotone type="checkbox" value="false">
+            </div>
+        </div>
     </body>
 </html>

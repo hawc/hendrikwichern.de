@@ -38,5 +38,6 @@ function init() {
         headlineElement.classList.toggle('is-mail');
     });
 }
-
-init();
+document.addEventListener('DOMContentLoaded', () => {
+    init();
+});

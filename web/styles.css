@@ -4,6 +4,7 @@ html, body {
   margin: 0;
   box-sizing: border-box;
   font-family: Montserrat, sans-serif;
+  font-size: max(10px, 1vw);
 }
 html {
   height: 100%;
@@ -42,12 +43,20 @@ h2:hover {
   font-weight: 800;
   color: yellow;
   margin-left: 1rem;
-  padding: 0 1.2rem;
-  opacity: 0;
+  padding: 0 1rem;
+  display: none;
 }
 h2:hover + .desc {
   background: black;
-  opacity: 1;
+  display: inline;
+}
+@media (max-width: 600px) {
+  h2:hover + .desc {
+    background: black;
+    display: block;
+    width: calc(100% - 4rem);
+    margin: 0 1rem;
+  }
 }
 .wrapper {
   height: 100%;
@@ -69,6 +78,7 @@ h2:hover + .desc {
 }
 h1.is-mail {
   text-transform: lowercase;
+  line-break: anywhere;
 }
 h1.is-mail::before {
   content: 'web@';

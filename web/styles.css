@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
+
+html, body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+html {
+  height: 100%;
+  background: yellow;
+}
+body {
+  height: calc(100% - 4rem);
+  margin: 1rem;
+}
+h1 {
+  font-size: 6rem;
+  margin: 0 0 0 0.6rem;
+  line-height: 1.05;
+  letter-spacing: -3px;
+  font-weight: 700;
+}
+h2 {
+  display: inline-block;
+  font-size: 4.6rem;
+  margin: 0 0.5rem 0 0.8rem;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  font-weight: 800;
+  transform: skew(0deg);
+  transform-origin: bottom left;
+  transition: transform 0.3s;
+  user-select: none;
+}
+h2:hover {
+  transform: skew(-10deg);
+}
+.desc {
+  font-size: 4.6rem;
+  line-height: 1.05;
+  letter-spacing: 1px;
+  font-weight: 800;
+  color: yellow;
+  margin-left: 1rem;
+  padding: 0 1.2rem;
+  opacity: 0;
+}
+h2:hover + .desc {
+  background: black;
+  opacity: 1;
+}
+.wrapper {
+  height: 100%;
+  border: 1rem solid black;
+  overflow-y: auto;
+}
+.mail {
+  position: absolute;
+  bottom: 3.2rem;
+  right: 2.8rem;
+  font-size: 6rem;
+  line-height: 1.05;
+  letter-spacing: 1px;
+  font-weight: 800;
+  user-select: none;
+}
+.clickable {
+  cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAyCAYAAAAjrenXAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA90lEQVRoge2YQQ7DIAwEcZX/f9k9VTJRTU1wnI7EHFEgq80GY0RVWwYi4i6kqpLyEsMre8EqsMKPlck2HqPInZ5LiQ3W8S28mi28mi28mi28mqXKeYXRYexDpLpiHccKL4+KPYyJiDf+NU42QljHscK7qEQ+UTVehLCOY4VLa+1n+2X/fo+s24IRVgfWcazwUAG6EqFBcZka98A6jhV+2OISveCZeeYusI5jhXe7ykpsqsE6jhVe3gHNcipMuwN6DKxwiWx1T26NO+P/Qigq3YSC2HjxsGAdxwqfrpyZB7HZds2CdRwrPO2QFbk0OuN1+RGwjmOFvwEA6m1ebLRnkAAAAABJRU5ErkJggg=='), pointer;
+}
+h1.is-mail {
+  text-transform: lowercase;
+}
+h1.is-mail::before {
+  content: 'web@';
+}
+h1.is-mail::after {
+  content: '.de';
+}
+h1.is-mail .space {
+  display: none;
+}

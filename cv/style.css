@@ -1,0 +1,234 @@
+
+/* RESET */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+html, body {
+    background: #fff;
+    min-height: 100%;
+}
+body {
+    position: relative;
+    line-height: 1.5;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+#root, #__next {
+    isolation: isolate;
+}
+ul, ol {
+    padding-left: 1.2rem;
+}
+
+/* STYLES */
+
+/* Basics */
+html {
+    font-size: 20px;
+}
+body {
+    font-family: 'Work Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif, Papyrus;
+}
+h1 {
+    font-weight: 900;
+    font-size: 4.5rem;
+    line-height: 1;
+}
+h2 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    line-height: 1;
+}
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+h4,
+h5,
+h6 {
+    font-size: 1rem;
+}
+h3::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 3px;
+    background-color: #000;
+    box-shadow: 0 0 100px #000;
+}
+::selection {
+    background:rgba(75, 75, 75, 1);
+}
+.light {
+    font-weight: 400 !important;
+    font-style: italic !important;
+}
+li {
+    list-style-type: disc;
+}
+ul li.plus {
+    list-style-type: "+ ";
+}
+.tags {
+    display: inline-block;
+    padding: 0;
+}
+.tags li {
+    display: inline-block;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 0.8rem;
+    padding: 0 0.3rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5), 0 0 0.1rem rgba(0, 0, 0, 1);
+}
+.tags.links a {
+    color: rgb(255, 255, 255);
+}
+.mt-05 {
+    margin-top: 0.5rem;
+}
+.mb-2 {
+    margin-bottom: 2rem;
+}
+/* Content */
+.toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    line-height: 0;
+    padding: 3px 0;
+    border-radius: 0;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background: none;
+}
+.toggle svg {
+    width: 2rem;
+}
+.cv__container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.cv__head { 
+    grid-area: 1 / 1 / 2 / 4;
+    align-self: center;
+}
+.cv__content {
+    transition: opacity linear 2s;
+    gap: 50px 0px;
+    grid-area: 2 / 1 / 7 / 4;
+}
+.cv__contentExperience {  
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "cv__contentExperienceTitle cv__contentExperienceWork";
+    grid-area: 2 / 1 / 3 / 4;
+}
+.cv__contentExperienceTitle {
+    grid-area: cv__contentExperienceTitle;
+}
+.cv__contentExperienceWork { 
+    grid-area: cv__contentExperienceWork;
+}
+.cv__contentSkills { grid-area: 3 / 1 / 4 / 4; }
+  
+.cv__contentEducation { grid-area: 4 / 1 / 5 / 4; }
+  
+.cv__contentPersonal { grid-area: 5 / 1 / 6 / 4; }
+  
+.cv__contentContact { grid-area: 6 / 1 / 7 / 4; }
+  
+.cv__footer { grid-area: 7 / 1 / 8 / 4; }
+
+/* Effect */
+
+.opacity-0 .cv__content {
+    opacity: 0.4;
+}
+body {
+    filter: brightness(115%) grayscale(100%) contrast(5000%);
+}
+body.is-dark {
+    filter: brightness(115%) grayscale(100%) contrast(5000%) invert(1);
+}
+body {
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5), 0 0 0.1rem rgba(0, 0, 0, 1);
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    pointer-events: none;
+    background-image: url(https://grainy-gradients.vercel.app/noise.svg);  
+    filter: contrast(110%) brightness(100%);
+}
+.circle {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    height: 0px;
+    width: 0px;
+    box-shadow: 0 0 150px 150px rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+    background: transparent;
+}
+
+/* PRINT */
+
+@media print {
+    html {
+        font-size: 12px;
+    }
+    body {
+        filter: none !important;
+        text-shadow: none !important;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    .toggle,
+    .overlay,
+    .circle {
+        display: none !important;
+    }
+    .cv__container {
+        max-width: 100%;
+    }
+    .tags li {
+        box-shadow: none !important;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border: 1px solid rgb(0, 0, 0);
+    }
+ }

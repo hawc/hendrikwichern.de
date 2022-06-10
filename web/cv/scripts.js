@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
     const body = document.querySelector('body');
     const circle = document.querySelector('.circle');
+    const overlay = document.querySelector('.overlay');
     const toggle = document.querySelector('[data-toggle-dark-mode]');
     let left = 0;
     let top = 0;
@@ -31,9 +32,15 @@ window.addEventListener('DOMContentLoaded', () => {
     
             body.classList.remove('opacity-0');
             circle.removeAttribute('hidden');
+        } else {
+            body.classList.add('no-pointer');
+            circle.remove();
+            overlay.remove();
         }
     } else {
         toggle.remove();
         circle.remove();
+        overlay.remove();
+        body.classList.remove('opacity-0');
     }
 });

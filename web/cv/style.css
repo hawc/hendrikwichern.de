@@ -96,6 +96,9 @@ ul li.plus {
     padding: 0 0.3rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5), 0 0 0.1rem rgba(0, 0, 0, 1);
 }
+body.no-pointer .tags li {
+    box-shadow: none;
+}
 .tags.links a {
     color: rgb(255, 255, 255);
 }
@@ -168,17 +171,15 @@ ul li.plus {
 
 /* Effect */
 
-.opacity-0 .cv__content {
+body:not(.no-pointer).opacity-0 .cv__content {
     opacity: 0.4;
 }
-body {
+body:not(.no-pointer) {
     filter: brightness(115%) grayscale(100%) contrast(5000%);
-}
-body.is-dark {
-    filter: brightness(115%) grayscale(100%) contrast(5000%) invert(1);
-}
-body {
     text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5), 0 0 0.1rem rgba(0, 0, 0, 1);
+}
+body:not(.no-pointer).is-dark {
+    filter: brightness(115%) grayscale(100%) contrast(5000%) invert(1);
 }
 .overlay {
     position: absolute;

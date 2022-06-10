@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
             } else {
                 body.classList.remove('is-dark');
             }
-            toggle.addEventListener('click', () => {
+            toggle.addEventListener('mouseup', () => {
                 body.classList.toggle('is-dark');
             });
         }

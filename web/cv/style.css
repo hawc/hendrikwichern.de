@@ -93,8 +93,31 @@ ul li.plus {
     border-radius: 20px;
     color: rgb(255, 255, 255);
     font-size: 0.8rem;
-    padding: 0 0.3rem;
+    padding: 0 0.4rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5), 0 0 0.1rem rgba(0, 0, 0, 1);
+}
+.tags li a,
+.tags li a:hover,
+.tags li a:focus,
+.tags li a:active,
+.tags li a:visited,
+.tags li a:link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.tags li:has(a) {
+    transition: transform 0.3s;
+}
+.tags li:has(a):hover,
+.tags li:has(a):active,
+.tags li:has(a):focus {
+    transform: scale(1.075);
+}
+.tags li a::before {
+    content: '→ ';
+    display: inline-block;
+    transform: translateY(-1px);
+    padding-right: 3px;
 }
 body.no-pointer .tags li {
     box-shadow: none;
@@ -125,21 +148,23 @@ body.no-pointer .tags li {
 .cv__container {  
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
     gap: 0px 0px;
     grid-auto-flow: row;
     max-width: 42rem;
     margin: 0 auto;
     padding: 0 20px;
 }
-.cv__head { 
+.cv__head {
     grid-area: 1 / 1 / 2 / 4;
     align-self: center;
+    padding: 100px 0;
 }
 .cv__content {
     transition: opacity linear 2s;
     gap: 50px 0px;
     grid-area: 2 / 1 / 7 / 4;
+    padding-bottom: 100px;
 }
 .cv__contentExperience {  
     margin-bottom: 2rem;
@@ -159,7 +184,9 @@ body.no-pointer .tags li {
 .cv__contentExperienceWork { 
     grid-area: cv__contentExperienceWork;
 }
-.cv__contentSkills { grid-area: 3 / 1 / 4 / 4; }
+.cv__contentSkills { 
+    grid-area: 3 / 1 / 4 / 4;
+ }
   
 .cv__contentEducation { grid-area: 4 / 1 / 5 / 4; }
   
@@ -221,18 +248,41 @@ body:not(.no-pointer).is-dark {
     h2 {
         font-size: 1.75rem;
     }
+    h3::after {
+        content: none;
+    }
     .toggle,
     .overlay,
     .circle {
         display: none !important;
     }
+    .cv__head { 
+        padding: 50px 0;
+    }
     .cv__container {
         max-width: 100%;
+    }
+    .cv__content {
+        transition: none;
+        padding-bottom: 0;
+        opacity: 1 !important;
+    }
+    .cv__contentSkills { 
+        page-break-before: always;
     }
     .tags li {
         box-shadow: none !important;
         background-color: rgb(255, 255, 255);
         color: rgb(0, 0, 0);
         border: 1px solid rgb(0, 0, 0);
+    }
+    .tags li a,
+    .tags li a:hover,
+    .tags li a:focus,
+    .tags li a:active,
+    .tags li a:visited,
+    .tags li a:link {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
     }
  }

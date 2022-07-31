@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
     const body = document.querySelector('body');
-    const circle = document.querySelector('.circle');
-    const overlay = document.querySelector('.overlay');
-    const toggle = document.querySelector('[data-toggle-dark-mode]');
+    const circle = body.querySelector('.circle');
+    const overlay = body.querySelector('.overlay');
+    const toggle = body.querySelector('[data-toggle-dark-mode]');
     let left = 0;
     let top = 0;
 

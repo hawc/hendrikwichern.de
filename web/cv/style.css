@@ -1,3 +1,19 @@
+/* FONTS */
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(../static/WorkSans-Black.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../static/WorkSans-Regular.woff2) format('woff2');
+}
 
 /* RESET */
 
@@ -302,3 +318,4 @@ body:not(.no-pointer).is-dark {
         bottom: 0;
     }
  }
+

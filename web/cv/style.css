@@ -97,6 +97,9 @@ body {
   font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif,
     Papyrus;
 }
+p + p {
+  margin-top: 1rem;
+}
 h1 {
   font-weight: 900;
   font-size: 4.5rem;
@@ -104,7 +107,7 @@ h1 {
 }
 h2 {
   font-weight: 900;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   line-height: 1;
 }
 h3 {
@@ -180,6 +183,9 @@ body.no-pointer .tags li {
 }
 .tags.links a {
   color: rgb(255, 255, 255);
+}
+.mt-1 {
+  margin-top: 1rem;
 }
 .mt-05 {
   margin-top: 0.5rem;

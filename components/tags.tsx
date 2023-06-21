@@ -7,7 +7,7 @@ function Tag({ children }: { children: string }) {
   );
 }
 
-export function TagList({ tagNames, className }: { tagNames: string[], className: string }) {
+export function TagList({ tagNames, className = '' }: { tagNames: string[], className?: string }) {
   return (
     <ul className={className}>
       {tagNames.map((tagName: string) => (

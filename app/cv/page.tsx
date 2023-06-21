@@ -145,6 +145,23 @@ export default function Page() {
         </Container>
         <Container>
           <Box>
+            <Headline tag="h2" type='h3'>Technical Skills</Headline>
+          </Box>
+        </Container>
+        <Container cols='grid-cols-1'>
+          <Box>
+            <Headline tag="h4" type='h4'>Key Skills</Headline>
+            <TagList className="mb-2" tagNames={['JavaScript', 'TypeScript', 'Vue.js', 'React', 'Web Design', 'HTML', 'CSS', 'SVG', 'Twig', 'Blade']} />
+            <Headline tag="h4" type='h4'>Also worked with</Headline>
+            <TagList className="mb-2" tagNames={['GraphQL', 'Node.js', 'Webpack', 'Highcharts.js', 'Three.js', 'p5.js', 'Tailwind CSS', 'D3.js', 'Keycloak API', 'Contentful API', 'Jest', 'AWS: CloudFormation, CloudFront, IAM, Lambda, S3', 'Terraform', 'Docker', 'nginx', 'jQuery', 'Bootstrap', 'WebGL', 'PHP', 'Java', 'MySQL', 'Symfony', 'Typo3', 'ezPublish']} />
+            <Headline tag="h4" type='h4'>Tools</Headline>
+            <TagList className="mb-2" tagNames={['Git', 'Shell', 'BrowserStack', 'DigitalOcean', 'Netlify', 'Webpagetest.org', 'Google Analytics', 'Google Search Console', 'Figma', 'Sketch', 'Photoshop', 'Illustrator', 'IntelliJ', 'VS Code', 'Doodle Jump']} />
+            <Headline tag="h4" type='h4'>Further Professional Skills</Headline>
+            <TagList className="mb-2" tagNames={['Team Leadership', 'Accessibility & Usability', 'Pagespeed & SEO Optimization', 'Scrum', 'Graphic Design', 'English (fluent)', 'Korean (basics)']} />
+          </Box>
+        </Container>
+        <Container>
+          <Box>
             <Headline tag="h2" type='h3'>Personal Interests</Headline>
           </Box>
         </Container>
@@ -152,7 +169,7 @@ export default function Page() {
           <Box>
             <div>Creative Coding</div>
             <div>Print Design</div>
-            <div>Silk Screen Printing</div>
+            <div>Screen Printing</div>
             <div>Traveling</div>
             <div>Analogue Photography</div>
           </Box>

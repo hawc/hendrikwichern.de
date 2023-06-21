@@ -7,9 +7,6 @@ export function Footer() {
       <Container>
         <Box>
           <div className="flex justify-between flex-col md:flex-row">
-            <div className="mb-2 md:mb-0">
-              <span>hendrikwichern.de</span>
-            </div>
             <div className="flex gap-5 justify-between font-semibold">
               <Link href='https://github.com/hawc'>
                 GitHub
@@ -22,6 +19,11 @@ export function Footer() {
               </Link>
               <Link href='https://www.xing.com/profile/Hendrik_Wichern'>
                 Xing
+              </Link>
+            </div>
+            <div className="mb-2 md:mb-0">
+              <Link href='/imprint'>
+                Imprint
               </Link>
             </div>
           </div>

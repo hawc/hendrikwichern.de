@@ -5,7 +5,7 @@ export function Headline({ children, type, tag = type }: { children: string, typ
     'h2': 'text-4xl',
     'h3': 'text-3xl leading-tight',
     'h4': 'font-bold text-2xl',
-    'h5': 'text-1xl',
+    'h5': 'text-2xl',
     'h6': 'font-bold',
   };
   const headlineClass = type in headlineStyles ? headlineStyles[type] : '';

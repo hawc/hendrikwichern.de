@@ -3,19 +3,32 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 217,217,217;
-  --background-rgb: 0, 0, 0;
+  --content: #d9d9d9;
+  --highlight-teal: #06e386;
+  --highlight-blue: #0679e3;
+  --highlight-magenta: #e30670;
+  --highlight-yellow: #e3cd06;
+  --highlight: var(--content);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
+html {
+  font-size: 20px;
+}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  @apply bg-black;
+  @apply text-black;
+  overflow-x: hidden;
+}
+
+p + p {
+  margin-top: 1rem;
+}
+
+.leading-negative {
+  line-height: 0.9;
+}
+
+.bg-highlight {
+  background-color: var(--highlight);
 }

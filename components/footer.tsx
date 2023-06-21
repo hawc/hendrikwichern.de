@@ -7,7 +7,7 @@ export function Footer() {
       <Container>
         <Box>
           <div className="flex justify-between flex-col md:flex-row">
-            <div className="flex gap-5 justify-between font-semibold">
+            <div className="flex flex-wrap gap-2 md:gap-5 justify-between font-semibold">
               <Link href='https://github.com/hawc'>
                 GitHub
               </Link>
@@ -21,7 +21,7 @@ export function Footer() {
                 Xing
               </Link>
             </div>
-            <div className="mb-2 md:mb-0">
+            <div className="mt-2 md:mt-0 text-center">
               <Link href='/imprint'>
                 Imprint
               </Link>

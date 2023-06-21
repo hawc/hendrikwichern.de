@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { Box, Container } from "./box";
+import { Link } from "./link";
 
 export function Header({ children }: { children?: React.ReactElement[] | React.ReactElement | string }) {
   return (
@@ -8,7 +8,9 @@ export function Header({ children }: { children?: React.ReactElement[] | React.R
         <Box>
           <div className="flex justify-between">
             <div>
-              <Link className="inline-block font-bold" href={'/'}>Hendrik Wichern</Link>
+              <div className="inline-block font-bold">
+                <Link href={'/'}>Hendrik Wichern</Link>
+              </div>
               <div className="ml-3 inline-block italic">Web Developer</div>
             </div>
             {children ?? (

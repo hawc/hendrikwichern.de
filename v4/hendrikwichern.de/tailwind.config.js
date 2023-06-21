@@ -9,13 +9,17 @@ module.exports = {
     extend: {
       colors: {
         'content': 'var(--content)',
-        'primary1': '#06e386',
       },
       fontSize: {
+        '2xl': '1.25rem',
+        '3xl': '2rem',
         '5xl': '4rem',
         '6xl': '8rem',
         '7xl': '12rem',
         'text-base': '1.5rem',
+      },
+      gridTemplateColumns: {
+        '1-3': '33% auto',
       }
     },
   },

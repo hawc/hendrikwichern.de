@@ -10,7 +10,7 @@ export function ContentLinkBox({ title, description, href, tags }: { title: stri
       <div className={tags?.length ? '' : 'flex-grow'}>{description}</div>
       {tags?.length ? <TagList className='mt-1 flex-grow' tagNames={tags} /> : <></>}
       <div className='text-right'>
-        <Link href={href}>this way</Link>
+        <Link arrow href={href}>this way</Link>
       </div>
     </Box>
   );

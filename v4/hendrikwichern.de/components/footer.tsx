@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { Box, Container } from "./box";
+import { Link } from "./link";
 
 export function Footer() {
   return (
@@ -10,17 +10,17 @@ export function Footer() {
             <div className="mb-2 md:mb-0">
               <span>hendrikwichern.de</span>
             </div>
-            <div className="flex gap-5 justify-between">
-              <Link className="font-semibold" href='https://github.com/hawc' target="_blank">
+            <div className="flex gap-5 justify-between font-semibold">
+              <Link href='https://github.com/hawc'>
                 GitHub
               </Link>
-              <Link className="font-semibold" href='https://codepen.io/hawcubite' target="_blank">
+              <Link href='https://codepen.io/hawcubite'>
                 Codepen.io
               </Link>
-              <Link className="font-semibold" href='https://www.linkedin.com/in/hendrik-wichern/' target="_blank">
+              <Link href='https://www.linkedin.com/in/hendrik-wichern/'>
                 LinkedIn
               </Link>
-              <Link className="font-semibold" href='https://www.xing.com/profile/Hendrik_Wichern' target="_blank">
+              <Link href='https://www.xing.com/profile/Hendrik_Wichern'>
                 Xing
               </Link>
             </div>

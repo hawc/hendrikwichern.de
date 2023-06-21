@@ -3,15 +3,17 @@ import { Headline } from '@/components/headline';
 import { ContentLinkBox } from '@/components/contentModules';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import Link from 'next/link';
+import { Link } from '@/components/link';
 
 export default function Page() {
   return (
-    <>
+    <div className='grid gap-px' style={{ "--highlight": 'var(--highlight-blue)' } as React.CSSProperties}>
       <Header>
-        <Link href="/playground" className='font-semibold'>Playground</Link>
+        <div className='font-semibold'>
+          <Link href="/playground">Playground</Link>
+        </div>
       </Header>
-      <main style={{ "--highlight": 'var(--highlight-blue)' } as React.CSSProperties} className='grid gap-px'>
+      <main className='grid gap-px'>
         <Container>
           <Box highlighted>
             <Headline type='h1'>Draw</Headline>
@@ -34,6 +36,6 @@ export default function Page() {
         </Container>
       </main>
       <Footer />
-    </>
+    </div>
   )
 }

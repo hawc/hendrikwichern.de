@@ -5,8 +5,8 @@
 :root {
   --content: #d9d9d9;
   --highlight-teal: #06e386;
-  --highlight-blue: #0679e3;
-  --highlight-magenta: #e30670;
+  --highlight-blue: #0079ff;
+  --highlight-magenta: #ff0060;
   --highlight-yellow: #e3cd06;
   --highlight: var(--content);
 }

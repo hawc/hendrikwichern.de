@@ -1,4 +1,4 @@
-export function Headline({ children, type, tag = type }: { children: string, type: string, tag?: string }) {
+export function Headline({ children, type, tag = type, className = '' }: { children: string, type: string, tag?: string, className?: string }) {
   const Tag = tag as keyof JSX.IntrinsicElements;
   const headlineStyles: { [key: string]: string } = {
     'h1': 'font-bold text-5xl md:text-6xl lg:text-7xl leading-negative tracking-tighter',
@@ -10,7 +10,7 @@ export function Headline({ children, type, tag = type }: { children: string, typ
   };
   const headlineClass = type in headlineStyles ? headlineStyles[type] : '';
   return (
-    <Tag className={`${headlineClass}`}>
+    <Tag className={`${headlineClass} ${className}`}>
       {children}
     </Tag>
   );

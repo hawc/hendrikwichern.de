@@ -7,13 +7,13 @@ import { Link } from '@/components/link';
 
 export default function Page() {
   return (
-    <div className='grid gap-px' style={{ "--highlight": 'var(--highlight-blue)' } as React.CSSProperties}>
+    <div className='grid gap-2px' style={{ "--highlight": 'var(--highlight-blue)' } as React.CSSProperties}>
       <Header>
         <div className='font-semibold'>
           <Link href="/playground">Playground</Link>
         </div>
       </Header>
-      <main className='grid gap-px'>
+      <main className='grid gap-2px'>
         <Container>
           <Box highlighted>
             <Headline type='h1'>Draw</Headline>

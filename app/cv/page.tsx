@@ -12,13 +12,13 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div className='grid gap-px' style={{ "--highlight": 'var(--highlight-magenta)' } as React.CSSProperties}>
+    <div className='grid gap-2px' style={{ "--highlight": 'var(--highlight-magenta)' } as React.CSSProperties}>
       <Header>
         <div className='font-semibold'>
           <Link href="/">Home</Link>
         </div>
       </Header>
-      <main className='grid gap-px'>
+      <main className='grid gap-2px'>
         <Container>
           <Box highlighted>
             <Headline type='h1'>CV</Headline>
@@ -49,6 +49,9 @@ export default function Page() {
             <Headline tag="h4" type='h4'>
               Senior Product Engineer
             </Headline>
+            <List>
+              <ListItem>Maintenance and development of micro-frontend website; frontend, backend and infrastructure</ListItem>
+            </List>
             <TagList className='mt-1 flex-grow' tagNames={['TypeScript', 'React', 'GraphQL', 'Styled Components', 'AWS']} />
           </Box>
         </Container>

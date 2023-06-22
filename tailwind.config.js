@@ -20,6 +20,15 @@ module.exports = {
       },
       gridTemplateColumns: {
         '1-3': '33% auto',
+      },
+      gap: {
+        '2px': '2px',
+      },
+      margin: {
+        '-2px': '-2px',
+      },
+      borderWidth: {
+        '2px': '2px',
       }
     },
   },

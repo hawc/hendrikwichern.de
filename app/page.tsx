@@ -6,9 +6,9 @@ import { Footer } from '@/components/footer';
 
 export default function Page() {
   return (
-    <div className='grid gap-px' style={{ "--highlight": 'var(--highlight-teal)' } as React.CSSProperties}>
+    <div className='grid gap-2px' style={{ "--highlight": 'var(--highlight-teal)' } as React.CSSProperties}>
       <Header />
-      <main className='grid gap-px'>
+      <main className='grid gap-2px'>
         <Container>
           <Box highlighted>
             <Headline type='h1'>Hi there!</Headline>

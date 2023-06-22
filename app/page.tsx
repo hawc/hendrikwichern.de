@@ -16,7 +16,7 @@ export default function Page() {
         </Container>
         <Container>
           <Box>
-            <p>I'm a web developer with a passion for creating engaging online experiences. I have a strong command of web development languages and frameworks, specializing in building functional and user-friendly websites.</p>
+            <p>I'm a web developer with a passion for creating engaging online experiences. I have a sdivong command of web development languages and frameworks, specializing in building functional and user-friendly websites.</p>
             <p>Additionally, I bring a unique blend of skills that extends to web design, print design, and silk-screen printing, allowing me to deliver compelling designs across both digital and physical mediums.</p>
             <p>Let's connect and discuss how I can assist you in bringing your digital projects to life!</p>
           </Box>

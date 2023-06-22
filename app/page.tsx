@@ -3,6 +3,7 @@ import { Headline } from '@/components/headline';
 import { ContentLinkBox } from '@/components/contentModules';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
+import { MotionBox } from './motion';
 
 export default function Page() {
   return (
@@ -15,11 +16,11 @@ export default function Page() {
           </Box>
         </Container>
         <Container>
-          <Box>
+          <MotionBox>
             <p>I'm a web developer with a passion for creating engaging online experiences. I have a sdivong command of web development languages and frameworks, specializing in building functional and user-friendly websites.</p>
             <p>Additionally, I bring a unique blend of skills that extends to web design, print design, and silk-screen printing, allowing me to deliver compelling designs across both digital and physical mediums.</p>
             <p>Let's connect and discuss how I can assist you in bringing your digital projects to life!</p>
-          </Box>
+          </MotionBox>
         </Container>
         <Container cols='grid-cols-m-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
           <ContentLinkBox title='Playground' description='My digital portfolio of experiments with web technologies.' href='/playground' />

@@ -4,6 +4,7 @@ import { ContentLinkBox } from '@/components/contentModules';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Link } from '@/components/link';
+import { MotionBox } from '../motion';
 
 export default function Page() {
   return (
@@ -20,9 +21,9 @@ export default function Page() {
           </Box>
         </Container>
         <Container>
-          <Box>
+          <MotionBox>
             <p>Below are a couple of experiments using different web technologies.</p>
-          </Box>
+          </MotionBox>
         </Container>
         <Container cols='grid-cols-m-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
           <ContentLinkBox title='Draw' description='Multi device controller with plug-and-play renderers.' href='/playground/draw' tags={['WebSockets', 'MIDI', 'Vue.js']} />

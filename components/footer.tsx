@@ -1,3 +1,4 @@
+import { MotionBox } from "@/app/motion";
 import { Box, Container } from "./box";
 import { Link } from "./link";
 
@@ -5,7 +6,7 @@ export function Footer() {
   return (
     <footer>
       <Container>
-        <Box>
+        <MotionBox>
           <div className="flex justify-between flex-col md:flex-row">
             <div className="flex flex-wrap gap-2 md:gap-5 justify-between font-semibold">
               <Link href='https://github.com/hawc'>
@@ -27,7 +28,7 @@ export function Footer() {
               </Link>
             </div>
           </div>
-        </Box>
+        </MotionBox>
       </Container>
     </footer>
   );

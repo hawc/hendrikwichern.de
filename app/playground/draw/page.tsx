@@ -4,6 +4,7 @@ import { ContentLinkBox } from '@/components/contentModules';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Link } from '@/components/link';
+import { MotionBox } from '@/app/motion';
 
 export default function Page() {
   return (
@@ -20,11 +21,11 @@ export default function Page() {
           </Box>
         </Container>
         <Container>
-          <Box>
+          <MotionBox>
             <p>Hi! This is a (work-in-progress) playground for WebGL rendering with user input.</p>
             <p>It's written in TypeScript and Vue, and uses peer-to-peer connections via WebSockets. Bonus: Web MIDI API. The MIDI output from your “Maschine Mikro MK3” or “Intech Grid PO16” can directly control the rendering. Works best for “Object” and “Wave”.</p>
             <p>Go to one of the linked pages below, scan the displayed QR code or click on the controller icon. You'll be forwarded to a control page.</p>
-          </Box>
+          </MotionBox>
         </Container>
         <Container cols='grid-cols-m-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
           <ContentLinkBox title='Ink' description='Digital text thrasher.' href='https://draw.hawc.de/ink' tags={['SVG', 'CSS']} />

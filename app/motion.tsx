@@ -10,4 +10,16 @@ const Component = forwardRef((props: { children: React.ReactElement[] | React.Re
 });
 Component.displayName = "MotionBox";
 
-export const MotionBox = motion(Component);
+const MotionComponent = motion(Component);
+
+export function MotionBox(props: { children: React.ReactElement[] | React.ReactElement | string, dashed?: boolean, highlighted?: boolean }): React.ReactElement {
+  return (
+    <MotionComponent
+      initial={{ x: -(Math.random() * 20), opacity: 0.5 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.5, type: "easeOut" }}
+      {...props}>
+      {props.children}
+    </MotionComponent>
+  );
+}

@@ -6,7 +6,7 @@ import { Link } from '@/components/link';
 
 export default function Page() {
   return (
-    <div className='grid gap-2px' style={{ "--highlight": 'var(--highlight-teal)' } as React.CSSProperties}>
+    <div className='grid gap-2px' style={{ "--highlight": 'var(--highlight-orange)' } as React.CSSProperties}>
       <Header>
         <div className='font-semibold'>
           <Link href="/">Home</Link>

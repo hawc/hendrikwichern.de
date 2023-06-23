@@ -10,7 +10,7 @@ export default function Page() {
     <div className='grid gap-2px' style={{ "--highlight": 'var(--highlight-blue)' } as React.CSSProperties}>
       <Header>
         <div className='font-semibold'>
-          <Link href="/playground">Playground</Link>
+          <Link href="/projects">Projects</Link>
         </div>
       </Header>
       <main className='grid gap-2px'>

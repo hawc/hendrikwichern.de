@@ -16,7 +16,7 @@ export default function Page() {
       <main className='grid gap-2px'>
         <Container>
           <Box highlighted>
-            <Headline type='h1'>Playground</Headline>
+            <Headline type='h1'>Projects</Headline>
           </Box>
         </Container>
         <Container>
@@ -25,7 +25,7 @@ export default function Page() {
           </Box>
         </Container>
         <Container cols='grid-cols-m-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-          <ContentLinkBox title='Draw' description='Multi device controller with plug-and-play renderers.' href='/playground/draw' tags={['WebSockets', 'MIDI', 'Vue.js']} />
+          <ContentLinkBox title='Draw' description='Multi device controller with plug-and-play renderers.' href='/projects/draw' tags={['WebSockets', 'MIDI', 'Vue.js']} />
           <ContentLinkBox title='Dither' description='Create dithered bitmaps in the browser.' href='https://dither.hawc.de/' tags={['p5.js', 'Vue.js']} />
           <ContentLinkBox title='Kochen' description='A personal receipe collection, in German.' href='https://kochen.hawc.de/' tags={['GraphQL', 'React', 'Auth0 API']} />
           <ContentLinkBox title='Sieb & Druck' description='Documenting silk-screen printing, in German.' href='https://siebdruck.hawc.de/' tags={['Vue.js']} />

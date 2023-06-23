@@ -4,10 +4,11 @@
 
 :root {
   --content: #d9d9d9;
-  --highlight-teal: #06e386;
+  --highlight-teal: #1cd889;
   --highlight-blue: #0079ff;
   --highlight-magenta: #ff0060;
   --highlight-yellow: #e3cd06;
+  --highlight-orange: #ec4b23;
   --highlight: var(--content);
 }
 
@@ -19,6 +20,7 @@ body {
   @apply bg-black;
   @apply text-black;
   overflow-x: hidden;
+  hyphens: auto;
 }
 
 p + p {

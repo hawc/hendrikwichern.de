@@ -6,7 +6,7 @@ import { Footer } from '@/components/footer';
 
 export default function Page() {
   return (
-    <div className='grid gap-2px' style={{ "--highlight": 'var(--highlight-teal)' } as React.CSSProperties}>
+    <div className='grid gap-2px' style={{ "--highlight": 'var(--highlight-orange)' } as React.CSSProperties}>
       <Header />
       <main className='grid gap-2px'>
         <Container>
@@ -22,7 +22,7 @@ export default function Page() {
           </Box>
         </Container>
         <Container cols='grid-cols-m-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-          <ContentLinkBox title='Playground' description='My digital portfolio of experiments with web technologies.' href='/playground' />
+          <ContentLinkBox title='Projects' description='Digital playground of experiments with web technologies.' href='/projects' />
           <ContentLinkBox title='CV' description='Feel free to check out what I did in the past.' href='/cv' />
           <ContentLinkBox title='Contact' description='Please contact me via email if there’s anything I could help you with.' href='mailto:web@hendrikwichern.de' />
         </Container>

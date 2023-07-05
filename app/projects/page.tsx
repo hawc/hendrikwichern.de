@@ -30,7 +30,6 @@ export default function Page() {
           <ContentLinkBox title='Kochen' description='A personal receipe collection, in German.' href='https://kochen.hawc.de/' tags={['GraphQL', 'React', 'Contentful API', 'Auth0 API']} />
           <ContentLinkBox title='Dither' description='Create dithered bitmaps in the browser.' href='https://dither.hawc.de/' tags={['p5.js', 'Vue.js']} />
           <ContentLinkBox title='Sieb & Druck' description='Documenting silk-screen printing, in German.' href='https://siebdruck.hawc.de/' tags={['Vue.js']} />
-          <ContentLinkBox title='Scrobble Info' description='Receive push notifications for music you are currently playing.' href='https://scrobble-info.hawc.de/' tags={['last.fm API']} />
         </Container>
       </main>
       <Footer />

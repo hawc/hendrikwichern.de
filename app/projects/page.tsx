@@ -26,8 +26,9 @@ export default function Page() {
         </Container>
         <Container cols='grid-cols-m-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
           <ContentLinkBox title='Draw' description='Multi device controller with plug-and-play renderers.' href='/projects/draw' tags={['WebSockets', 'MIDI', 'Vue.js']} />
+          <ContentLinkBox title='Siedlungen' description='Listing housing estates, in German.' href='https://siedlungen.hawc.de/' tags={['Prisma', 'React', 'Tailwind', 'PostgreSQL', 'Auth0 API']} />
+          <ContentLinkBox title='Kochen' description='A personal receipe collection, in German.' href='https://kochen.hawc.de/' tags={['GraphQL', 'React', 'Contentful API', 'Auth0 API']} />
           <ContentLinkBox title='Dither' description='Create dithered bitmaps in the browser.' href='https://dither.hawc.de/' tags={['p5.js', 'Vue.js']} />
-          <ContentLinkBox title='Kochen' description='A personal receipe collection, in German.' href='https://kochen.hawc.de/' tags={['GraphQL', 'React', 'Auth0 API']} />
           <ContentLinkBox title='Sieb & Druck' description='Documenting silk-screen printing, in German.' href='https://siebdruck.hawc.de/' tags={['Vue.js']} />
           <ContentLinkBox title='Scrobble Info' description='Receive push notifications for music you are currently playing.' href='https://scrobble-info.hawc.de/' tags={['last.fm API']} />
         </Container>

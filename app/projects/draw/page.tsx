@@ -21,9 +21,12 @@ export default function Page() {
         </Container>
         <Container>
           <Box>
-            <p>Hi! This is a (work-in-progress) playground for WebGL rendering with user input.</p>
-            <p>It's written in TypeScript and Vue, and uses peer-to-peer connections via WebSockets. Bonus: Web MIDI API. The MIDI output from your “Maschine Mikro MK3” or “Intech Grid PO16” can directly control the rendering. Works best for “Object” and “Wave”.</p>
-            <p>Go to one of the linked pages below, scan the displayed QR code or click on the controller icon. You'll be forwarded to a control page.</p>
+            <p>Hi! This is a playground for remote controlling different types of web content.</p>
+            <p>It's written in TypeScript and Vue.js/Nuxt, and uses peer-to-peer connections via WebSockets for controlling the input. It run's on DigitalOcean, proxied by an nginx webserver.</p>
+            <p>The renderers linked below are using different technologies for client side rendering, as Three.js, p5.js or simple SVG + CSS.</p>
+            <p>For setting the input values, you can either change them directly in the browser, or connect your mobile device via the shown QR code.</p>
+            <p>It's possible to control the input by specific MIDI devices (Web MIDI API) and audio input (Web Audio API) as well, even though it looks best for only some of them (like "Remote Sky", "Object" and "Wave").</p>
+            <p>As most of the 3d rendering logic is not performance optimized, this is consideres desktop only right now.</p>
           </Box>
         </Container>
         <Container cols='grid-cols-m-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>

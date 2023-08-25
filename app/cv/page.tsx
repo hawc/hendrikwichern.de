@@ -20,23 +20,23 @@ export default function Page() {
       </Header>
       <main className='grid gap-2px'>
         <Container>
-          <Box highlighted>
-            <Headline type='h1'>CV</Headline>
+          <Box highlighted className='py-0'>
+            <Headline type='h1' className='print:text-4xl'>CV</Headline>
           </Box>
         </Container>
         <Container>
           <Box>
-            <p>I specialize in building TypeScript-based web applications. My primary focus is on creating robust and user-centered websites. I am well-versed in utilizing frameworks like Vue.js and React, along with Node.js and APIs based on REST or GraphQL – running on platforms like AWS and Netlify.</p>
-            <p>In addition to my technical proficiency, I also have a strong understanding of UX (User Experience) principles and performance optimization. I prioritize creating seamless and intuitive experiences for website visitors while ensuring the application's efficiency and speed.</p>
-            <p>I am always eager to explore new technologies and experienced in incorporating them into existing development stacks. I enjoy working in development teams, empowering them to leverage these innovative tools in their daily work.</p>
+            <p>Hey there! I specialize in building TypeScript-based web applications. My primary focus is on creating robust and user-centered websites. I am well-versed in utilizing frameworks like Vue.js and React, along with Node.js and APIs based on REST or GraphQL – running on platforms like AWS or Netlify.</p>
+            <p>In addition to my technical proficiency, I have a strong understanding of UX (User Experience) principles and web performance. I prioritize creating seamless and intuitive experiences for end users while ensuring the application's efficiency.</p>
+            <p>I am always eager to explore new technologies and incorporate them into existing development stacks or create from-the-scratch online experiences. I enjoy working in agile teams with mentoring junior developers and supporting them during the daily work.</p>
           </Box>
         </Container>
         <Container>
-          <Box>
+          <Box className='print:pb-0'>
             <Headline tag="h2" type='h3'>Professional Experience</Headline>
           </Box>
         </Container>
-        <Container cols='grid-cols-m-2 grid-cols-1 md:grid-cols-1-3'>
+        <Container cols='grid-cols-m-2 grid-cols-1 md:grid-cols-1-3 print:grid-cols-1-3'>
           <Box dashed>
             <Headline tag="h3" type='h4'>
               Accenture Song, Hamburg
@@ -50,12 +50,19 @@ export default function Page() {
               Senior Product Engineer
             </Headline>
             <List>
-              <ListItem>Maintenance and development of micro-frontend website; frontend, backend and infrastructure</ListItem>
+              <ListItem>Fullstack maintenance and extension of micro-frontend website; frontend, backend and infrastructure (IaC).</ListItem>
+              <ListItem isNested>
+                <List>
+                  <ListItem>Performance optimization</ListItem>
+                  <ListItem>CI/CD enhancement</ListItem>
+                </List>
+              </ListItem>
+              <ListItem>Mentoring</ListItem>
             </List>
-            <TagList className='mt-1 flex-grow' tagNames={['TypeScript', 'React', 'GraphQL', 'Styled Components', 'AWS']} />
+            <TagList className='mt-1 flex-grow' tagNames={['TypeScript', 'React', 'GraphQL', 'AWS', 'Contentful', 'Styled Components', 'CI/CD']} />
           </Box>
         </Container>
-        <Container cols='grid-cols-m-2 grid-cols-1 md:grid-cols-1-3'>
+        <Container cols='grid-cols-m-2 grid-cols-1 md:grid-cols-1-3 print:grid-cols-1-3'>
           <Box dashed>
             <Headline tag="h3" type='h4'>
               Statista, Hamburg
@@ -74,7 +81,7 @@ export default function Page() {
             </List>
           </Box>
         </Container>
-        <Container cols='grid-cols-m-2 grid-cols-1 md:grid-cols-1-3'>
+        <Container cols='grid-cols-m-2 grid-cols-1 md:grid-cols-1-3 print:grid-cols-1-3'>
           <Box dashed>
             <Headline tag="h3" type='h4'>
               Statista, Hamburg
@@ -96,12 +103,13 @@ export default function Page() {
                   <ListItem>Frontend rewrite</ListItem>
                 </List>
               </ListItem>
-              <ListItem>Maintenance of legacy application</ListItem>
+              <ListItem>Mentoring</ListItem>
+              <ListItem>Maintenance of legacy PHP application</ListItem>
             </List>
-            <TagList className='mt-1 flex-grow' tagNames={['TypeScript', 'Vue.js', 'Nuxt.js', 'Docker', 'AWS', 'Terraform', 'Node.js', 'Rest APIs']} />
+            <TagList className='mt-1 flex-grow' tagNames={['TypeScript', 'Vue.js', 'Nuxt.js', 'Docker', 'AWS', 'Terraform', 'Node.js', 'PHP', 'Laravel']} />
           </Box>
         </Container>
-        <Container cols='grid-cols-m-2 grid-cols-1 md:grid-cols-1-3'>
+        <Container cols='grid-cols-m-2 grid-cols-1 md:grid-cols-1-3 print:grid-cols-1-3'>
           <Box dashed>
             <Headline tag="h3" type='h4'>
               Statista, Hamburg
@@ -125,7 +133,7 @@ export default function Page() {
             <TagList className='mt-1 flex-grow' tagNames={['JavaScript', 'Vue.js', 'Highcharts.js', 'Webpack', 'HTML', 'CSS', 'Twig', 'Symfony']} />
           </Box>
         </Container>
-        <Container cols='grid-cols-m-2 grid-cols-1 md:grid-cols-1-3'>
+        <Container cols='grid-cols-m-2 grid-cols-1 md:grid-cols-1-3 print:grid-cols-1-3'>
           <Box dashed>
             <Headline tag="h3" type='h4'>
               cadooz, Hamburg
@@ -147,16 +155,16 @@ export default function Page() {
           </Box>
         </Container>
         <Container>
-          <Box>
+          <Box className='print:pb-0'>
             <Headline tag="h2" type='h3'>Technical Skills</Headline>
           </Box>
         </Container>
         <Container cols='grid-cols-1'>
           <Box>
             <Headline tag="h4" type='h4'>Key Skills</Headline>
-            <TagList className="mb-2" tagNames={['JavaScript', 'TypeScript', 'Vue.js', 'React', 'Web Design', 'HTML', 'CSS', 'SVG', 'Twig', 'Blade']} />
+            <TagList className="mb-2" tagNames={['JavaScript', 'TypeScript', 'Vue.js', 'React', 'Web Design', 'HTML', 'CSS', 'SVG']} />
             <Headline tag="h4" type='h4'>Also worked with</Headline>
-            <TagList className="mb-2" tagNames={['GraphQL', 'Node.js', 'Webpack', 'Highcharts.js', 'Three.js', 'p5.js', 'Tailwind CSS', 'D3.js', 'Keycloak API', 'Contentful API', 'Jest', 'AWS: CloudFormation, CloudFront, IAM, Lambda, S3', 'Terraform', 'Docker', 'nginx', 'jQuery', 'Bootstrap', 'WebGL', 'PHP', 'Java', 'MySQL', 'Symfony', 'Typo3', 'ezPublish']} />
+            <TagList className="mb-2" tagNames={['AWS: CloudFormation, CloudFront, IAM, Lambda, S3', 'GraphQL', 'Node.js', 'Webpack', 'Highcharts.js', 'Three.js', 'p5.js', 'Tailwind', 'Styles Components', 'D3.js', 'Keycloak', 'Contentful', 'Cloudinary', 'Jest', 'Terraform', 'Docker', 'nginx', 'jQuery', 'Bootstrap', 'WebGL', 'PHP', 'Java', 'MySQL', 'PostgesQL', 'Twig', 'Blade', 'Symfony', 'Typo3', 'ezPublish']} />
             <Headline tag="h4" type='h4'>Tools</Headline>
             <TagList className="mb-2" tagNames={['Git', 'Shell', 'BrowserStack', 'DigitalOcean', 'Netlify', 'Webpagetest.org', 'Google Analytics', 'Google Search Console', 'Figma', 'Sketch', 'Photoshop', 'Illustrator', 'IntelliJ', 'VS Code', 'Doodle Jump']} />
             <Headline tag="h4" type='h4'>Further Professional Skills</Headline>
@@ -164,7 +172,7 @@ export default function Page() {
           </Box>
         </Container>
         <Container>
-          <Box>
+          <Box className='print:pb-0'>
             <Headline tag="h2" type='h3'>Personal Interests</Headline>
           </Box>
         </Container>
@@ -175,6 +183,20 @@ export default function Page() {
             <div>Screen Printing</div>
             <div>Traveling</div>
             <div>Analogue Photography</div>
+          </Box>
+        </Container>
+        <Container className='hidden print:flex'>
+          <Box className='print:pb-0'>
+            <Headline tag='h2' type='h3'>Online Profiles</Headline>
+          </Box>
+        </Container>
+        <Container className='hidden print:flex' cols='grid-cols-1'>
+          <Box>
+            <div>Website: https://hendrikwichern.de</div>
+            <div>GitHub: https://github.com/hawc</div>
+            <div>Codepen.io: https://codepen.io/hawcubite</div>
+            <div>LinkedIn: https://www.linkedin.com/in/hendrik-wichern/</div>
+            <div>Xing: https://www.xing.com/profile/Hendrik_Wichern/</div>
           </Box>
         </Container>
       </main>

@@ -22,10 +22,9 @@ export default function Page() {
         <Container>
           <Box>
             <p>Hi! This is a playground for remote controlling different types of web content.</p>
-            <p>It's written in TypeScript and Vue.js/Nuxt, and uses peer-to-peer connections via WebSockets for controlling the input. It run's on DigitalOcean, proxied by an nginx webserver.</p>
-            <p>The renderers linked below are using different technologies for client side rendering, as Three.js, p5.js or simple SVG + CSS.</p>
-            <p>For setting the input values, you can either change them directly in the browser, or connect your mobile device via the shown QR code.</p>
-            <p>It's possible to control the input by specific MIDI devices (Web MIDI API) and audio input (Web Audio API) as well, even though it looks best for only some of them (like "Remote Sky", "Object" and "Wave").</p>
+            <p>It's written in TypeScript and Vue.js/Nuxt, and uses peer-to-peer connections via WebSockets for controlling the input. It runs on DigitalOcean, proxied by an nginx webserver.</p>
+            <p>The renderers linked below use various frameworks or technologies for client side rendering, e.g. Three.js, p5.js or simple SVG + CSS.</p>
+            <p>For setting the input values, you can either change them directly in the browser, or connect your mobile device via the shown QR code. It's possible to control the input by specific MIDI devices (Web MIDI API) and audio input (Web Audio API) as well, even though it looks best for only some of them (like "Remote Sky", "Object" and "Wave").</p>
             <p>As most of the 3d rendering logic is not performance optimized, this is consideres desktop only right now.</p>
           </Box>
         </Container>

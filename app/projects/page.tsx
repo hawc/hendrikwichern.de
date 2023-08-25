@@ -21,13 +21,13 @@ export default function Page() {
         </Container>
         <Container>
           <Box>
-            <p>Below are a couple of experiments using different web technologies.</p>
+            <p>Below are a couple of websites I've built using various web technologies. Some of them are quite experimental or work-in-progress.</p>
           </Box>
         </Container>
         <Container cols='grid-cols-m-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
           <ContentLinkBox title='Draw' description='Multi device controller with plug-and-play renderers.' href='/projects/draw' tags={['Vue.js', 'WebSockets', 'MIDI']} />
-          <ContentLinkBox title='Großwohnsiedlungen' description='Listing housing estates, in German.' href='https://grosswohnsiedlungen.de/' tags={['React', 'Tailwind', 'Prisma', 'PostgreSQL', 'Auth0 API', 'Mapbox API']} />
-          <ContentLinkBox title='Kochen' description='A personal receipe collection, in German.' href='https://kochen.hawc.de/' tags={['React', 'GraphQL', 'Contentful API', 'Auth0 API']} />
+          <ContentLinkBox title='Großwohnsiedlungen' description='Listing housing estates, in German.' href='https://grosswohnsiedlungen.de/' tags={['React', 'Tailwind', 'Prisma', 'PostgreSQL', 'Auth0', 'Mapbox', 'Cloudinary']} />
+          <ContentLinkBox title='Kochen' description='A personal receipe collection, in German.' href='https://kochen.hawc.de/' tags={['React', 'GraphQL', 'Contentful', 'Auth0']} />
           <ContentLinkBox title='Dither' description='Create dithered bitmaps in the browser.' href='https://dither.hawc.de/' tags={['Vue.js', 'p5.js']} />
           <ContentLinkBox title='Sieb & Druck' description='Documenting silk-screen printing, in German.' href='https://siebdruck.hawc.de/' tags={['Vue.js']} />
         </Container>

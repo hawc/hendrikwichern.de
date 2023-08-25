@@ -6,7 +6,7 @@ export function Footer() {
     <footer>
       <Container>
         <Box>
-          <div className="flex justify-between flex-col md:flex-row">
+          <div className="flex justify-between flex-col md:flex-row print:hidden">
             <div className="flex flex-wrap gap-2 md:gap-5 justify-between font-semibold">
               <Link href='https://github.com/hawc'>
                 GitHub

@@ -13,8 +13,8 @@ export function Header({ children }: { children?: React.ReactElement[] | React.R
               </div>
               <div className="md:ml-3 inline-block italic">Web Developer</div>
             </div>
-            {children ?? (
-              <div>
+            {children && (
+              <div className="print:hidden">
                 {children}
               </div>
             )}

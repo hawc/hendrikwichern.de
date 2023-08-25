@@ -23,7 +23,7 @@ export default function Page() {
           </Box>
         </Container>
         <Container cols='grid-cols-m-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-          <ContentLinkBox title='Projects' description='Some of my personal web projets. Mostly experimental stuff.' href='/projects' />
+          <ContentLinkBox title='Projects' description='Some of my personal web projects. Mostly experiments with web technologies and frameworks.' href='/projects' />
           <ContentLinkBox title='CV' description='Feel free to check out what I did in the past.' href='/cv' />
           <ContentLinkBox title='Contact' description='Please reach out via email if you want to get to know me further.' href='mailto:web@hendrikwichern.de' />
         </Container>

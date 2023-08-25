@@ -106,7 +106,7 @@ export default function Page() {
               <ListItem>Mentoring</ListItem>
               <ListItem>Maintenance of legacy PHP application</ListItem>
             </List>
-            <TagList className='mt-1 flex-grow' tagNames={['TypeScript', 'Vue.js', 'Nuxt.js', 'Docker', 'AWS', 'Terraform', 'Node.js', 'PHP', 'Laravel']} />
+            <TagList className='mt-1 flex-grow' tagNames={['TypeScript', 'Vue.js', 'Nuxt.js', 'Docker', 'AWS', 'Terraform', 'PHP', 'Laravel']} />
           </Box>
         </Container>
         <Container cols='grid-cols-m-2 grid-cols-1 md:grid-cols-1-3 print:grid-cols-1-3'>
@@ -162,9 +162,9 @@ export default function Page() {
         <Container cols='grid-cols-1'>
           <Box>
             <Headline tag="h4" type='h4'>Key Skills</Headline>
-            <TagList className="mb-2" tagNames={['JavaScript', 'TypeScript', 'Vue.js', 'React', 'Web Design', 'HTML', 'CSS', 'SVG']} />
+            <TagList className="mb-2" tagNames={['JavaScript', 'TypeScript', 'Vue.js', 'Nuxt.js', 'React', 'Next.js', 'Web Design', 'HTML', 'CSS', 'SVG']} />
             <Headline tag="h4" type='h4'>Also worked with</Headline>
-            <TagList className="mb-2" tagNames={['AWS: CloudFormation, CloudFront, IAM, Lambda, S3', 'GraphQL', 'Node.js', 'Webpack', 'Highcharts.js', 'Three.js', 'p5.js', 'Tailwind', 'Styles Components', 'D3.js', 'Keycloak', 'Contentful', 'Cloudinary', 'Jest', 'Terraform', 'Docker', 'nginx', 'jQuery', 'Bootstrap', 'WebGL', 'PHP', 'Java', 'MySQL', 'PostgesQL', 'Twig', 'Blade', 'Symfony', 'Typo3', 'ezPublish']} />
+            <TagList className="mb-2" tagNames={['AWS · CloudFormation, CloudFront, IAM, Lambda, S3', 'GraphQL', 'Node.js', 'Webpack', 'Highcharts.js', 'Three.js', 'p5.js', 'Tailwind', 'Styles Components', 'D3.js', 'Keycloak', 'Contentful', 'Cloudinary', 'Jest', 'Terraform', 'Docker', 'nginx', 'jQuery', 'Bootstrap', 'WebGL', 'PHP', 'Java', 'MySQL', 'PostgesQL', 'Twig', 'Blade', 'Symfony', 'Typo3', 'ezPublish']} />
             <Headline tag="h4" type='h4'>Tools</Headline>
             <TagList className="mb-2" tagNames={['Git', 'Shell', 'BrowserStack', 'DigitalOcean', 'Netlify', 'Webpagetest.org', 'Google Analytics', 'Google Search Console', 'Figma', 'Sketch', 'Photoshop', 'Illustrator', 'IntelliJ', 'VS Code', 'Doodle Jump']} />
             <Headline tag="h4" type='h4'>Further Professional Skills</Headline>

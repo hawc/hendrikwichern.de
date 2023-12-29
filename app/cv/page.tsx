@@ -12,10 +12,10 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div className='grid gap-2px' style={{ "--highlight": 'var(--highlight-magenta)' } as React.CSSProperties}>
+    <div className='grid gap-2px' style={{ '--highlight': 'var(--highlight-magenta)' } as React.CSSProperties}>
       <Header>
         <div className='font-semibold'>
-          <Link href="/">Home</Link>
+          <Link href='/'>Home</Link>
         </div>
       </Header>
       <main className='grid gap-2px'>
@@ -33,20 +33,20 @@ export default function Page() {
         </Container>
         <Container>
           <Box className='print:pb-0'>
-            <Headline tag="h2" type='h3'>Professional Experience</Headline>
+            <Headline tag='h2' type='h3'>Professional Experience</Headline>
           </Box>
         </Container>
         <Container cols='grid-cols-m-2 grid-cols-1 md:grid-cols-1-3 print:grid-cols-1-3'>
           <Box dashed>
-            <Headline tag="h3" type='h4'>
+            <Headline tag='h3' type='h4'>
               Accenture Song, Hamburg
             </Headline>
             <div className='italic'>
-              01/2023 - present
+              01/2023 - 12/2023
             </div>
           </Box>
           <Box>
-            <Headline tag="h4" type='h4'>
+            <Headline tag='h4' type='h4'>
               Senior Product Engineer
             </Headline>
             <List>
@@ -64,7 +64,7 @@ export default function Page() {
         </Container>
         <Container cols='grid-cols-m-2 grid-cols-1 md:grid-cols-1-3 print:grid-cols-1-3'>
           <Box dashed>
-            <Headline tag="h3" type='h4'>
+            <Headline tag='h3' type='h4'>
               Statista, Hamburg
             </Headline>
             <div className='italic'>
@@ -72,7 +72,7 @@ export default function Page() {
             </div>
           </Box>
           <Box>
-            <Headline tag="h4" type='h4'>
+            <Headline tag='h4' type='h4'>
               Team Lead & Tech Lead
             </Headline>
             <List>
@@ -83,7 +83,7 @@ export default function Page() {
         </Container>
         <Container cols='grid-cols-m-2 grid-cols-1 md:grid-cols-1-3 print:grid-cols-1-3'>
           <Box dashed>
-            <Headline tag="h3" type='h4'>
+            <Headline tag='h3' type='h4'>
               Statista, Hamburg
             </Headline>
             <div className='italic'>
@@ -91,7 +91,7 @@ export default function Page() {
             </div>
           </Box>
           <Box>
-            <Headline tag="h4" type='h4'>
+            <Headline tag='h4' type='h4'>
               Tech Lead
             </Headline>
             <List>
@@ -111,7 +111,7 @@ export default function Page() {
         </Container>
         <Container cols='grid-cols-m-2 grid-cols-1 md:grid-cols-1-3 print:grid-cols-1-3'>
           <Box dashed>
-            <Headline tag="h3" type='h4'>
+            <Headline tag='h3' type='h4'>
               Statista, Hamburg
             </Headline>
             <div className='italic'>
@@ -119,7 +119,7 @@ export default function Page() {
             </div>
           </Box>
           <Box>
-            <Headline tag="h4" type='h4'>
+            <Headline tag='h4' type='h4'>
               Frontend Web Developer
             </Headline>
             <List>
@@ -135,7 +135,7 @@ export default function Page() {
         </Container>
         <Container cols='grid-cols-m-2 grid-cols-1 md:grid-cols-1-3 print:grid-cols-1-3'>
           <Box dashed>
-            <Headline tag="h3" type='h4'>
+            <Headline tag='h3' type='h4'>
               cadooz, Hamburg
             </Headline>
             <div className='italic'>
@@ -143,7 +143,7 @@ export default function Page() {
             </div>
           </Box>
           <Box>
-            <Headline tag="h4" type='h4'>
+            <Headline tag='h4' type='h4'>
               Frontend Web Developer
             </Headline>
             <List>
@@ -156,24 +156,24 @@ export default function Page() {
         </Container>
         <Container>
           <Box className='print:pb-0'>
-            <Headline tag="h2" type='h3'>Technical Skills</Headline>
+            <Headline tag='h2' type='h3'>Technical Skills</Headline>
           </Box>
         </Container>
         <Container cols='grid-cols-1'>
           <Box>
-            <Headline tag="h4" type='h4'>Key Skills</Headline>
-            <TagList className="mb-2" tagNames={['JavaScript', 'TypeScript', 'Vue.js', 'Nuxt.js', 'React', 'Next.js', 'Web Design', 'HTML', 'CSS', 'SVG']} />
-            <Headline tag="h4" type='h4'>Also worked with</Headline>
-            <TagList className="mb-2" tagNames={['AWS · CloudFormation, CloudFront, IAM, Lambda, S3', 'GraphQL', 'Node.js', 'Webpack', 'Highcharts.js', 'Three.js', 'p5.js', 'Tailwind', 'Styles Components', 'D3.js', 'Keycloak', 'Contentful', 'Cloudinary', 'Jest', 'Terraform', 'Docker', 'nginx', 'jQuery', 'Bootstrap', 'WebGL', 'PHP', 'Java', 'MySQL', 'PostgesQL', 'Twig', 'Blade', 'Symfony', 'Typo3', 'ezPublish']} />
-            <Headline tag="h4" type='h4'>Tools</Headline>
-            <TagList className="mb-2" tagNames={['Git', 'Shell', 'BrowserStack', 'DigitalOcean', 'Netlify', 'Webpagetest.org', 'Google Analytics', 'Google Search Console', 'Figma', 'Sketch', 'Photoshop', 'Illustrator', 'IntelliJ', 'VS Code', 'Doodle Jump']} />
-            <Headline tag="h4" type='h4'>Further Professional Skills</Headline>
-            <TagList className="mb-2" tagNames={['Team Leadership', 'Accessibility & Usability', 'Pagespeed & SEO Optimization', 'Scrum', 'Graphic Design', 'English (fluent)', 'Korean (basics)']} />
+            <Headline tag='h4' type='h4'>Key Skills</Headline>
+            <TagList className='mb-2' tagNames={['JavaScript', 'TypeScript', 'Vue.js', 'Nuxt.js', 'React', 'Next.js', 'Web Design', 'HTML', 'CSS', 'SVG']} />
+            <Headline tag='h4' type='h4'>Also worked with</Headline>
+            <TagList className='mb-2' tagNames={['GraphQL', 'Node.js', 'Webpack', 'Svelte', 'Sveltekit', 'Highcharts.js', 'Three.js', 'p5.js', 'Tailwind', 'Styled Components', 'D3.js', 'Jest', 'Playwright', 'Terraform', 'nginx', 'jQuery', 'Bootstrap', 'WebGL', 'PHP', 'Java', 'MySQL', 'PostgresQL', 'Twig', 'Blade', 'Symfony', 'Typo3', 'ezPublish']} />
+            <Headline tag='h4' type='h4'>Tools</Headline>
+            <TagList className='mb-2' tagNames={['AWS · CloudFormation, IAM, Lambda, S3', 'Git', 'Shell', 'BrowserStack', 'DigitalOcean', 'Netlify', 'Vercel', 'Keycloak', 'Contentful', 'Cloudinary', 'Docker', 'Webpagetest.org', 'Google Analytics', 'Google Search Console', 'Figma', 'Sketch', 'Photoshop', 'Illustrator', 'IntelliJ', 'VS Code', 'Doodle Jump']} />
+            <Headline tag='h4' type='h4'>Further Professional Skills</Headline>
+            <TagList className='mb-2' tagNames={['Team Leadership', 'Accessibility & Usability', 'Pagespeed & SEO Optimization', 'Scrum', 'Graphic Design', 'English (fluent)', 'Korean (basics)']} />
           </Box>
         </Container>
         <Container>
           <Box className='print:pb-0'>
-            <Headline tag="h2" type='h3'>Personal Interests</Headline>
+            <Headline tag='h2' type='h3'>Personal Interests</Headline>
           </Box>
         </Container>
         <Container cols='grid-cols-1'>

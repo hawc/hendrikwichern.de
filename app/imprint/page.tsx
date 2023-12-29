@@ -6,10 +6,10 @@ import { Link } from '@/components/link';
 
 export default function Page() {
   return (
-    <div className='grid gap-2px' style={{ "--highlight": 'var(--highlight-orange)' } as React.CSSProperties}>
+    <div className='grid gap-2px' style={{ '--highlight': 'var(--highlight-orange)' } as React.CSSProperties}>
       <Header>
         <div className='font-semibold'>
-          <Link href="/">Home</Link>
+          <Link href='/'>Home</Link>
         </div>
       </Header>
       <main className='grid gap-2px'>
@@ -25,7 +25,7 @@ export default function Page() {
                 Angaben nach § 5 TMG, sowie verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
               </Headline>
               <div>Hendrik Wichern</div>
-              <div className="mb-4">
+              <div className='mb-4'>
                 E-Mail: <span>web@hendrikwichern.de</span>
               </div>
               <Headline type='h3' tag='h3'>Disclaimer</Headline>

@@ -26,14 +26,52 @@ export default function Page() {
         </Container>
         <Container>
           <Box>
-            <p>Hey there! I specialize in building TypeScript-based web applications. My primary focus is on creating robust and user-centered websites. I am well-versed in utilizing frameworks like Vue.js and React, along with Node.js and APIs based on REST or GraphQL – running on platforms like AWS or Netlify.</p>
+            <p>Hey there! I specialize in building TypeScript-based web applications. My primary focus is on creating robust and user-centered websites. I am well-versed in utilizing frameworks like React.js and Vue.js, along with Node.js and APIs based on REST or GraphQL – running on platforms like AWS or Netlify.</p>
             <p>In addition to my technical proficiency, I have a strong understanding of UX (User Experience) principles and web performance. I prioritize creating seamless and intuitive experiences for end users while ensuring the application's efficiency.</p>
-            <p>I am always eager to explore new technologies and incorporate them into existing development stacks or create from-the-scratch online experiences. I enjoy working in agile teams with mentoring junior developers and supporting them during the daily work.</p>
+            <p>I am always eager to explore new technologies and incorporate them into existing development stacks or create from-the-scratch online experiences. I enjoy working in agile teams, mentoring other developers and continuously improving the team's development processes.</p>
           </Box>
         </Container>
         <Container>
           <Box className='print:pb-0'>
             <Headline tag='h2' type='h3'>Professional Experience</Headline>
+          </Box>
+        </Container>
+        <Container cols='grid-cols-m-2 grid-cols-1 md:grid-cols-1-3 print:grid-cols-1-3'>
+          <Box dashed>
+            <Headline tag='h3' type='h4'>
+              Quantilope, Hamburg
+            </Headline>
+            <div className='italic'>
+              since 01/2024
+            </div>
+          </Box>
+          <Box>
+            <Headline tag='h4' type='h4'>
+              Senior Frontend Engineer
+            </Headline>
+            <List>
+              <ListItem>Fullstack rewrite of web-based research platform with focus on performance and coding standards</ListItem>
+              <ListItem isNested>
+                <List>
+                  <ListItem>Implementation of new features</ListItem>
+                  <ListItem>Integration of AI technologies</ListItem>
+                  <ListItem>Optimization and benchmarking of web performance</ListItem>
+                  <ListItem>Implementation of CI/CD processes</ListItem>
+                  <ListItem>Enhancing observability</ListItem>
+                  <ListItem>Extending the component library</ListItem>
+                </List>
+              </ListItem>
+              <ListItem>Maintenance of legacy applications</ListItem>
+              <ListItem isNested>
+                <List>
+                  <ListItem>Infrastructure optimization (AWS)</ListItem>
+                  <ListItem>Enhancing user experience</ListItem>
+                  <ListItem>Providing technical documentation</ListItem>
+                </List>
+              </ListItem>
+              <ListItem>Mentoring</ListItem>
+            </List>
+            <TagList className='mt-1 flex-grow' tagNames={['TypeScript', 'React', 'GraphQL', 'MongoDB', 'AWS', 'Meteor.js', 'Storybook', 'CI/CD']} />
           </Box>
         </Container>
         <Container cols='grid-cols-m-2 grid-cols-1 md:grid-cols-1-3 print:grid-cols-1-3'>
@@ -50,7 +88,7 @@ export default function Page() {
               Senior Product Engineer
             </Headline>
             <List>
-              <ListItem>Fullstack maintenance and extension of micro-frontend website; frontend, backend and infrastructure (IaC).</ListItem>
+              <ListItem>Maintenance and extension of micro-frontend website; frontend, backend and infrastructure (IaC), in close contact with client</ListItem>
               <ListItem isNested>
                 <List>
                   <ListItem>Performance optimization</ListItem>
@@ -162,13 +200,13 @@ export default function Page() {
         <Container cols='grid-cols-1'>
           <Box>
             <Headline tag='h4' type='h4'>Key Skills</Headline>
-            <TagList className='mb-2' tagNames={['JavaScript', 'TypeScript', 'Vue.js', 'Nuxt.js', 'React', 'Next.js', 'Web Design', 'HTML', 'CSS', 'SVG']} />
+            <TagList className='mb-2' tagNames={['TypeScript', 'React', 'Next.js', 'GraphQL', 'Node.js', 'UI/UX', 'Web Performance']} />
             <Headline tag='h4' type='h4'>Also worked with</Headline>
-            <TagList className='mb-2' tagNames={['GraphQL', 'Node.js', 'Webpack', 'Svelte', 'Sveltekit', 'Highcharts.js', 'Three.js', 'p5.js', 'Tailwind', 'Styled Components', 'D3.js', 'Jest', 'Playwright', 'Terraform', 'nginx', 'jQuery', 'Bootstrap', 'WebGL', 'PHP', 'Java', 'MySQL', 'PostgresQL', 'Twig', 'Blade', 'Symfony', 'Typo3', 'ezPublish']} />
+            <TagList className='mb-2' tagNames={['Vue.js', 'Nuxt.js', 'Svelte', 'Sveltekit', 'MongoDB', 'PostgresQL', 'Highcharts.js', 'Three.js', 'p5.js', 'Tailwind', 'Styled Components', 'D3.js', 'Jest', 'Playwright', 'Strorybook', 'Terraform', 'nginx', 'jQuery', 'WebGL', 'PHP', 'Java', 'MySQL', 'Symfony', 'Typo3', 'ezPublish']} />
             <Headline tag='h4' type='h4'>Tools</Headline>
-            <TagList className='mb-2' tagNames={['AWS · CloudFormation, IAM, Lambda, S3', 'Git', 'Shell', 'BrowserStack', 'DigitalOcean', 'Netlify', 'Vercel', 'Keycloak', 'Contentful', 'Cloudinary', 'Docker', 'Webpagetest.org', 'Google Analytics', 'Google Search Console', 'Figma', 'Sketch', 'Photoshop', 'Illustrator', 'IntelliJ', 'VS Code', 'Doodle Jump']} />
+            <TagList className='mb-2' tagNames={['AWS · CloudFormation, IAM, Lambda, S3', 'Git', 'Shell', 'BrowserStack', 'DigitalOcean', 'Netlify', 'Vercel', 'Keycloak', 'Contentful', 'Cloudinary', 'Docker', 'Webpagetest.org', 'Google Analytics', 'Google Search Console', 'Figma', 'Sketch', 'Photoshop', 'Illustrator', 'Doodle Jump']} />
             <Headline tag='h4' type='h4'>Further Professional Skills</Headline>
-            <TagList className='mb-2' tagNames={['Team Leadership', 'Accessibility & Usability', 'Pagespeed & SEO Optimization', 'Scrum', 'Graphic Design', 'English (fluent)', 'Korean (basics)']} />
+            <TagList className='mb-2' tagNames={['Team Leadership', 'Accessibility & Usability', 'Pagespeed & SEO Optimization', 'Maintainability & Extendability', 'Scrum', 'Graphic Design', 'English (fluent)', 'Korean (basics)']} />
           </Box>
         </Container>
         <Container>

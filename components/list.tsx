@@ -1,6 +1,6 @@
 export function ListItem({ children, isPlus, isNested }: { children: React.ReactElement[] | React.ReactElement | string, isPlus?: boolean, isNested?: boolean }) {
   return (
-    <li className="ml-4" style={isNested ? { 'listStyleType': 'none' } : isPlus ? { 'listStyleType': "'+ '" } : { 'listStyleType': "'• '" }}>
+    <li className="ml-4 my-1" style={isNested ? { 'listStyleType': 'none' } : isPlus ? { 'listStyleType': "'+ '" } : { 'listStyleType': "'• '" }}>
       {children}
     </li>
   );

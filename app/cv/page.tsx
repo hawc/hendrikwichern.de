@@ -1,14 +1,14 @@
 import { Box, Container } from '@/components/box';
-import { Headline } from '@/components/headline';
-import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
-import { TagList } from '@/components/tags';
-import { List, ListItem } from '@/components/list';
+import { Header } from '@/components/header';
+import { Headline } from '@/components/headline';
 import { Link } from '@/components/link';
+import { List, ListItem } from '@/components/list';
+import { TagList } from '@/components/tags';
 
 export const metadata = {
   robots: 'noindex, nofollow',
-}
+};
 
 export default function Page() {
   return (
@@ -26,8 +26,10 @@ export default function Page() {
         </Container>
         <Container>
           <Box>
-            <p>Hey there! I specialize in building TypeScript-based web applications. My primary focus is on creating robust and user-centered websites. I am well-versed in utilizing frameworks like React.js and Vue.js, along with Node.js and APIs based on REST or GraphQL – running on platforms like AWS or Netlify.</p>
+            <p>Hey there! I specialize in building TypeScript-based web applications. My primary focus is on creating robust and user-centered websites. I am well-versed in utilizing frameworks like React.js and Vue.js, along with Node.js and APIs based on REST or GraphQL – running on infrastructure provided by AWS, DigitalOcean or Netlify.</p>
+            <p>I've also worked with Azure AI services, leveraging OpenAI models to bring intelligent, language-driven features into web applications.</p>
             <p>In addition to my technical proficiency, I have a strong understanding of UX (User Experience) principles and web performance. I prioritize creating seamless and intuitive experiences for end users while ensuring the application's efficiency.</p>
+            <p>My work is informed by solid design fundamentals, and I'm comfortable collaborating with designers and working directly in tools like Figma to bridge the gap between design and development.</p>
             <p>I am always eager to explore new technologies and incorporate them into existing development stacks or create from-the-scratch online experiences. I enjoy working in agile teams, mentoring other developers and continuously improving the team's development processes.</p>
           </Box>
         </Container>
@@ -50,26 +52,28 @@ export default function Page() {
               Senior Frontend Engineer
             </Headline>
             <List>
-              <ListItem>Fullstack rewrite of web-based research platform with focus on performance and coding standards</ListItem>
+              <ListItem>
+                Full-stack rewrite of a web-based research platform with emphasis on performance, scalability, and long-term maintainability
+              </ListItem>
               <ListItem isNested>
                 <List>
-                  <ListItem>Implementation of new features</ListItem>
-                  <ListItem>Integration of AI technologies</ListItem>
-                  <ListItem>Optimization and benchmarking of web performance</ListItem>
-                  <ListItem>Implementation of CI/CD processes</ListItem>
-                  <ListItem>Enhancing observability</ListItem>
-                  <ListItem>Extending the component library</ListItem>
+                  <ListItem>Integrated AI-driven features into core workflows</ListItem>
+                  <ListItem>Developed new features through iterative design, user interviews, and feedback integration</ListItem>
+                  <ListItem>Conducted web performance benchmarking and optimization</ListItem>
+                  <ListItem>Expanded and maintained component library for UI consistency and reusability</ListItem>
+                  <ListItem>Established comprehensive testing strategy including unit, component, and end-to-end tests</ListItem>
+                  <ListItem>Implemented robust CI/CD pipelines to streamline deployments</ListItem>
+                  <ListItem>Led Scrum ceremonies such as backlog refinement and sprint planning, and closely supported the product manager in aligning technical delivery with product goals</ListItem>
                 </List>
               </ListItem>
-              <ListItem>Maintenance of legacy applications</ListItem>
+              <ListItem>Maintained and improved legacy applications to ensure stability and performance</ListItem>
               <ListItem isNested>
                 <List>
-                  <ListItem>Infrastructure optimization (AWS)</ListItem>
-                  <ListItem>Enhancing user experience</ListItem>
-                  <ListItem>Providing technical documentation</ListItem>
+                  <ListItem>Improved user experience across existing interfaces</ListItem>
+                  <ListItem>Optimized cloud infrastructure on AWS for cost and performance</ListItem>
                 </List>
               </ListItem>
-              <ListItem>Mentoring</ListItem>
+              <ListItem>Provided mentorship to junior engineers</ListItem>
             </List>
             <TagList className='mt-1 flex-grow' tagNames={['TypeScript', 'React', 'GraphQL', 'MongoDB', 'AWS', 'Meteor.js', 'Storybook', 'CI/CD']} />
           </Box>
@@ -88,14 +92,17 @@ export default function Page() {
               Senior Product Engineer
             </Headline>
             <List>
-              <ListItem>Maintenance and extension of micro-frontend website; frontend, backend and infrastructure (IaC), in close contact with client</ListItem>
+              <ListItem>
+                Maintained and extended a micro-frontend automotive platform across frontend, backend, and infrastructure (IaC)
+              </ListItem>
               <ListItem isNested>
                 <List>
-                  <ListItem>Performance optimization</ListItem>
-                  <ListItem>CI/CD enhancement</ListItem>
+                  <ListItem>Close collaboration with the client to align technical solutions with business needs</ListItem>
+                  <ListItem>Improved application performance through targeted optimizations</ListItem>
+                  <ListItem>Enhanced CI/CD pipelines for faster, more reliable deployments</ListItem>
                 </List>
               </ListItem>
-              <ListItem>Mentoring</ListItem>
+              <ListItem>Provided mentorship and technical guidance to team members</ListItem>
             </List>
             <TagList className='mt-1 flex-grow' tagNames={['TypeScript', 'React', 'GraphQL', 'AWS', 'Contentful', 'Styled Components', 'CI/CD']} />
           </Box>
@@ -114,7 +121,7 @@ export default function Page() {
               Team Lead & Tech Lead
             </Headline>
             <List>
-              <ListItem>Leadership of development team for ecommerce analytics platform</ListItem>
+              <ListItem>Leadership of development team for e-commerce analytics platform</ListItem>
               <ListItem isPlus>same as below</ListItem>
             </List>
           </Box>
@@ -133,16 +140,16 @@ export default function Page() {
               Tech Lead
             </Headline>
             <List>
-              <ListItem>Project scoping & roadmap planning</ListItem>
-              <ListItem>Work on ecommerce analytics platform:</ListItem>
+              <ListItem>Project scoping and roadmap planning to align technical goals with business priorities</ListItem>
+              <ListItem>Led development of an e-commerce analytics platform:</ListItem>
               <ListItem isNested>
                 <List>
-                  <ListItem>Architectural conception for full stack rewrite</ListItem>
-                  <ListItem>Frontend rewrite</ListItem>
+                  <ListItem>Designed full-stack architecture for a comprehensive platform rewrite</ListItem>
+                  <ListItem>Drove frontend redevelopment to modernize user experience and codebase</ListItem>
                 </List>
               </ListItem>
-              <ListItem>Mentoring</ListItem>
-              <ListItem>Maintenance of legacy PHP application</ListItem>
+              <ListItem>Provided mentorship and technical leadership to team members</ListItem>
+              <ListItem>Maintained and stabilized legacy PHP application during transition phase</ListItem>
             </List>
             <TagList className='mt-1 flex-grow' tagNames={['TypeScript', 'Vue.js', 'Nuxt.js', 'Docker', 'AWS', 'Terraform', 'PHP', 'Laravel']} />
           </Box>
@@ -161,12 +168,12 @@ export default function Page() {
               Frontend Web Developer
             </Headline>
             <List>
-              <ListItem>Pagespeed performace analysis, optimization and maintenance</ListItem>
-              <ListItem>Rewrite of market outlook pages</ListItem>
-              <ListItem>Usability and accessibility optimization</ListItem>
-              <ListItem>Search engine optimization</ListItem>
-              <ListItem>Rewrite of jQuery codebase in vanilla JavaScript and Vue.js</ListItem>
-              <ListItem>Redesign and implementation of various marketing pages</ListItem>
+              <ListItem>Analyzed and optimized page performance for improved load times and Core Web Vitals</ListItem>
+              <ListItem>Rewrote and modernized market outlook pages for better maintainability and performance</ListItem>
+              <ListItem>Improved usability and accessibility to enhance user experience and meet WCAG standards</ListItem>
+              <ListItem>Implemented SEO best practices to improve search visibility and organic reach</ListItem>
+              <ListItem>Refactored legacy jQuery codebase using vanilla JavaScript and Vue.js</ListItem>
+              <ListItem>Redesigned and built marketing pages in alignment with updated brand and UX guidelines</ListItem>
             </List>
             <TagList className='mt-1 flex-grow' tagNames={['JavaScript', 'Vue.js', 'Highcharts.js', 'Webpack', 'HTML', 'CSS', 'Twig', 'Symfony']} />
           </Box>
@@ -185,9 +192,9 @@ export default function Page() {
               Frontend Web Developer
             </Headline>
             <List>
-              <ListItem>Frontend rewrite of ecommerce shops and SaaS tools</ListItem>
-              <ListItem>Maintenance and template updates on CMS-based websites</ListItem>
-              <ListItem>Search engine optimization</ListItem>
+              <ListItem>Led frontend rewrites of e-commerce storefronts and SaaS platforms to improve performance, maintainability, and user experience</ListItem>
+              <ListItem>Maintained and updated CMS-based websites, including custom template development and integration</ListItem>
+              <ListItem>Applied SEO best practices to enhance site visibility and search rankings</ListItem>
             </List>
             <TagList className='mt-1 flex-grow' tagNames={['JavaScript', 'jQuery', 'Velocity (for Java)', 'Bootstrap', 'Typo3', 'ezPublish']} />
           </Box>
@@ -202,9 +209,9 @@ export default function Page() {
             <Headline tag='h4' type='h4'>Key Skills</Headline>
             <TagList className='mb-2' tagNames={['TypeScript', 'React', 'Next.js', 'GraphQL', 'Node.js', 'UI/UX', 'Web Performance']} />
             <Headline tag='h4' type='h4'>Also worked with</Headline>
-            <TagList className='mb-2' tagNames={['Vue.js', 'Nuxt.js', 'Svelte', 'Sveltekit', 'MongoDB', 'PostgresQL', 'Highcharts.js', 'Three.js', 'p5.js', 'Tailwind', 'Styled Components', 'D3.js', 'Jest', 'Playwright', 'Strorybook', 'Terraform', 'nginx', 'jQuery', 'WebGL', 'PHP', 'Java', 'MySQL', 'Symfony', 'Typo3', 'ezPublish']} />
+            <TagList className='mb-2' tagNames={['Vue.js', 'Nuxt.js', 'Svelte', 'Sveltekit', 'MongoDB', 'PostgresQL', 'Highcharts.js', 'Three.js', 'Tailwind', 'D3.js', 'Jest', 'Playwright', 'Storybook', 'Terraform', 'PHP', 'MySQL']} />
             <Headline tag='h4' type='h4'>Tools</Headline>
-            <TagList className='mb-2' tagNames={['AWS · CloudFormation, IAM, Lambda, S3', 'Git', 'Shell', 'BrowserStack', 'DigitalOcean', 'Netlify', 'Vercel', 'Keycloak', 'Contentful', 'Cloudinary', 'Docker', 'Webpagetest.org', 'Google Analytics', 'Google Search Console', 'Figma', 'Sketch', 'Photoshop', 'Illustrator', 'Doodle Jump']} />
+            <TagList className='mb-2' tagNames={['AWS · CloudFormation, IAM, Lambda, S3', 'JIRA', 'Netlify', 'Vercel', 'Contentful', 'Docker', 'Figma', 'Photoshop', 'Illustrator', 'Doodle Jump']} />
             <Headline tag='h4' type='h4'>Further Professional Skills</Headline>
             <TagList className='mb-2' tagNames={['Team Leadership', 'Accessibility & Usability', 'Pagespeed & SEO Optimization', 'Maintainability & Extendability', 'Scrum', 'Graphic Design', 'English (fluent)', 'Korean (basics)']} />
           </Box>
@@ -240,5 +247,5 @@ export default function Page() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }

@@ -1,7 +1,8 @@
+import { PropsWithChildren } from "react";
 import { Box, Container } from "./box";
 import { Link } from "./link";
 
-export function Header({ children }: { children?: React.ReactElement[] | React.ReactElement | string }) {
+export function Header({ children }: PropsWithChildren) {
   return (
     <header>
       <Container>

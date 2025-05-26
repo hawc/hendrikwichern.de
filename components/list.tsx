@@ -1,4 +1,6 @@
-export function ListItem({ children, isPlus, isNested }: { children: React.ReactElement[] | React.ReactElement | string, isPlus?: boolean, isNested?: boolean }) {
+import { PropsWithChildren } from "react";
+
+export function ListItem({ children, isPlus, isNested }: PropsWithChildren<{ isPlus?: boolean, isNested?: boolean; }>) {
   return (
     <li className="ml-4 my-1" style={isNested ? { 'listStyleType': 'none' } : isPlus ? { 'listStyleType': "'+ '" } : { 'listStyleType': "'• '" }}>
       {children}
@@ -6,7 +8,7 @@ export function ListItem({ children, isPlus, isNested }: { children: React.React
   );
 }
 
-export function List({ children }: { children: React.ReactElement[] | React.ReactElement | string }) {
+export function List({ children }: PropsWithChildren) {
   return (
     <ul className='list-disc list-outside'>
       {children}

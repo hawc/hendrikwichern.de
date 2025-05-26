@@ -10,6 +10,7 @@
   --highlight-yellow: #e3cd06;
   --highlight-orange: #ec4b23;
   --highlight: var(--content);
+  --contrast: #c6c6c6;
 }
 
 html {
@@ -36,4 +37,8 @@ p + p {
 
 .bg-highlight {
   background-color: var(--highlight);
+}
+
+.bg-contrast {
+  background-color: var(--contrast);
 }

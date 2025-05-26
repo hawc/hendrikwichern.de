@@ -209,11 +209,11 @@ export default function Page() {
             <Headline tag='h4' type='h4'>Key Skills</Headline>
             <TagList className='mb-2' tagNames={['TypeScript', 'React', 'Next.js', 'GraphQL', 'Node.js', 'UI/UX', 'Web Performance']} />
             <Headline tag='h4' type='h4'>Also worked with</Headline>
-            <TagList className='mb-2' tagNames={['Vue.js', 'Nuxt.js', 'Svelte', 'Sveltekit', 'MongoDB', 'PostgresQL', 'Highcharts.js', 'Three.js', 'Tailwind', 'D3.js', 'Jest', 'Playwright', 'Storybook', 'Terraform', 'PHP', 'MySQL']} />
+            <TagList className='mb-2' tagNames={['Vue.js', 'Nuxt.js', 'Svelte', 'Sveltekit', 'MongoDB', 'PostgreSQL', 'Highcharts.js', 'Three.js', 'Tailwind', 'D3.js', 'Jest', 'Playwright', 'Storybook', 'Terraform', 'PHP', 'MySQL']} />
             <Headline tag='h4' type='h4'>Tools</Headline>
             <TagList className='mb-2' tagNames={['AWS · CloudFormation, IAM, Lambda, S3', 'JIRA', 'Netlify', 'Vercel', 'Contentful', 'Docker', 'Figma', 'Photoshop', 'Illustrator', 'Doodle Jump']} />
             <Headline tag='h4' type='h4'>Further Professional Skills</Headline>
-            <TagList className='mb-2' tagNames={['Team Leadership', 'Accessibility & Usability', 'Pagespeed & SEO Optimization', 'Maintainability & Extendability', 'Scrum', 'Graphic Design', 'English (fluent)', 'Korean (basics)']} />
+            <TagList className='mb-2' tagNames={['Team Leadership', 'Accessibility & Usability', 'Pagespeed & SEO Optimization', 'Maintainability & Extendability', 'Scrum', 'Graphic & Web Design', 'English (fluent)', 'Korean (basics)']} />
           </Box>
         </Container>
         <Container>
@@ -241,7 +241,6 @@ export default function Page() {
             <div>GitHub: https://github.com/hawc</div>
             <div>Codepen.io: https://codepen.io/hawcubite</div>
             <div>LinkedIn: https://www.linkedin.com/in/hendrik-wichern/</div>
-            <div>Xing: https://www.xing.com/profile/Hendrik_Wichern/</div>
           </Box>
         </Container>
       </main>

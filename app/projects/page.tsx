@@ -26,10 +26,10 @@ export default function Page() {
             <p>I work primarily with React and Vue.js for frontend development, often paired with Next.js. For data storage, I use MongoDB and PostgreSQL, and I enjoy integrating various APIs like OpenAI, Mapbox, and Auth0. I'm particularly interested in real-time features, which is why you'll find WebSockets and MIDI implementations in some of my projects.</p>
           </Box>
         </Container>
-        <Container cols='grid-cols-m-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-          <ContentLinkBox title='Journo' description='News crawler & AI-powered search engine, in German.' href='https://journo.hawc.de/' tags={['React', 'Next.js', 'Playwright', 'OpenAI', 'MongoDB', 'Auth0']} />
-          <ContentLinkBox title='Draw' description='Multi device controller with plug-and-play renderers.' href='/projects/draw' tags={['Vue.js', 'WebSockets', 'MIDI']} />
-          <ContentLinkBox title='Großwohnsiedlungen' description='Listing housing estates, in German.' href='https://grosswohnsiedlungen.de/' tags={['React', 'Tailwind', 'Prisma', 'PostgreSQL', 'Auth0', 'Mapbox', 'Cloudinary']} />
+        <Container cols='grid-cols-m-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3'>
+          <ContentLinkBox title='Großwohnsiedlungen' description='Database of German large-scale housing estates, featuring architectural metadata and searchable settlement criteria, in German.' href='https://grosswohnsiedlungen.de/' tags={['React', 'Tailwind', 'Prisma', 'PostgreSQL', 'Auth0', 'Mapbox', 'Cloudinary']} />
+          <ContentLinkBox title='Journo' description='News crawler & AI-powered search engine for finding news articles that match a certain topic, in German.' href='https://journo.hawc.de/' tags={['React', 'Next.js', 'Playwright', 'OpenAI', 'MongoDB', 'Auth0']} />
+          <ContentLinkBox title='Draw' description='Playground for remotely controlling interactive web content using browser, mobile, MIDI, or audio inputs.' href='/projects/draw' tags={['Vue.js', 'WebSockets', 'MIDI']} />
           <ContentLinkBox title='Kochen' description='A personal receipe collection, in German.' href='https://kochen.hawc.de/' tags={['React', 'GraphQL', 'Contentful', 'Auth0']} />
           <ContentLinkBox title='Dither' description='Create dithered bitmaps in the browser.' href='https://dither.hawc.de/' tags={['Vue.js', 'p5.js']} />
           <ContentLinkBox title='Sieb & Druck' description='Documenting silk-screen printing, in German.' href='https://siebdruck.hawc.de/' tags={['Vue.js']} />

@@ -1,13 +1,13 @@
-import { Box, Container } from "./box";
-import { Link } from "./link";
+import { Box, Container } from './box';
+import { Link } from './link';
 
 export function Footer() {
   return (
-    <footer>
+    <footer className='print:hidden'>
       <Container>
         <Box>
-          <div className="flex justify-between flex-col md:flex-row print:hidden">
-            <div className="flex flex-wrap gap-2 md:gap-5 justify-between font-semibold">
+          <div className='flex justify-between flex-col md:flex-row'>
+            <div className='flex flex-wrap gap-2 md:gap-5 justify-between font-semibold'>
               <Link href='https://github.com/hawc'>
                 GitHub
               </Link>
@@ -21,7 +21,7 @@ export function Footer() {
                 Xing
               </Link>
             </div>
-            <div className="mt-2 md:mt-0 text-center">
+            <div className='mt-2 md:mt-0 text-center'>
               <Link href='/imprint'>
                 Imprint
               </Link>

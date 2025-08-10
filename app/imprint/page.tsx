@@ -1,7 +1,8 @@
-import { Box, Container } from '@/components/box';
-import { Headline } from '@/components/headline';
-import { Header } from '@/components/header';
+import { Box } from '@/components/box';
+import { Container } from '@/components/container';
 import { Footer } from '@/components/footer';
+import { Header } from '@/components/header';
+import { Headline } from '@/components/headline';
 import { Link } from '@/components/link';
 
 export default function Page() {

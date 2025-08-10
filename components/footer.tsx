@@ -1,4 +1,5 @@
-import { Box, Container } from './box';
+import { Box } from './box';
+import { Container } from './container';
 import { Link } from './link';
 
 export function Footer() {

@@ -220,9 +220,9 @@ export default function Page() {
             <Headline tag='h4' type='h4'>Key Skills</Headline>
             <TagList className='mb-2' tagNames={['TypeScript', 'React', 'Next.js', 'GraphQL', 'Node.js', 'UI/UX', 'Web Performance']} />
             <Headline tag='h4' type='h4'>Also worked with</Headline>
-            <TagList className='mb-2' tagNames={['Vue.js', 'Nuxt.js', 'Svelte', 'Sveltekit', 'MongoDB', 'PostgreSQL', 'Azure OpenAI', 'Highcharts.js', 'Three.js', 'Tailwind', 'Jest', 'Playwright', 'Storybook', 'Terraform', 'PHP', 'MySQL', 'AWS', 'DigitalOcean', 'Netlify']} />
+            <TagList className='mb-2' tagNames={['Vue.js', 'Nuxt.js', 'Svelte', 'Sveltekit', 'MongoDB', 'PostgreSQL', 'Azure OpenAI', 'Highcharts.js', 'Three.js', 'Tailwind', 'Jest', 'Playwright', 'Storybook', 'Terraform', 'PHP', 'MySQL']} />
             <Headline tag='h4' type='h4'>Tools</Headline>
-            <TagList className='mb-2' tagNames={['AWS · CloudFormation, IAM, Lambda, S3', 'JIRA', 'Netlify', 'Vercel', 'Contentful', 'Docker', 'Figma', 'Photoshop', 'Illustrator', 'Doodle Jump']} />
+            <TagList className='mb-2' tagNames={['AWS · CloudFormation, IAM, Lambda, S3', 'JIRA', 'Netlify', 'Vercel', 'DigitalOcean', 'Elastic APM', 'Grafana', 'Contentful', 'Docker', 'Figma', 'Photoshop', 'Illustrator', 'Doodle Jump']} />
           </Box>
         </Container>
         <Container cols='grid-cols-m-2 sm:grid-cols-2 print:grid-cols-2'>

@@ -32,5 +32,21 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities(
+        {
+          '.break-before-page': {
+            'break-before': 'page',
+            'page-break-before': 'always',
+          },
+          '.break-after-page': {
+            'break-after': 'page',
+            'page-break-after': 'always',
+          },
+        },
+        ['print'] // enables usage like print:break-before-page
+      )
+    },
+  ],
 }

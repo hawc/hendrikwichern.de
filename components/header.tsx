@@ -13,7 +13,7 @@ export function Header({ children }: PropsWithChildren) {
               <div className='inline-block font-bold'>
                 <Link href={'/'}>Hendrik Wichern</Link>
               </div>
-              <div className='md:ml-3 inline-block italic'>Web Developer</div>
+              <div className='md:ml-3 inline-block italic'>Product Engineer</div>
             </div>
             {children && (
               <div className='print:hidden'>

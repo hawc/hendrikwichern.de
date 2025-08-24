@@ -17,9 +17,11 @@ export default function Page() {
         </Container>
         <Container>
           <Box>
-            <p>Welcome! This is my personal website and portfolio. I'm Hendrik, a web developer passionate about creating engaging digital experiences.</p>
-            <p>I specialize in building functional and user-friendly websites, combining my expertise in web development with design skills. With strong proficiency in modern JavaScript frameworks, responsive design, and performance optimization, I create seamless digital experiences. My background spans both digital and physical mediums, including print design and silk-screen printing, allowing me to deliver compelling solutions across different platforms.</p>
-            <p>Interested in working together? I'm always excited to discuss new projects and opportunities. Feel free to reach out!</p>
+            <p>Welcome to my personal website and portfolio. I'm Hendrik, a product engineer focused on building digital experiences.</p>
+            <p>I build full-stack web applications with a focus on performance and user experience. My work spans the entire development process,
+              from concept to deployment, and I enjoy tackling complex technical challenges. 
+              I have experience leading teams and integrating emerging technologies like AI into web platforms.</p>
+            <p>Looking to collaborate? I'm open to discussing new projects and opportunities. Get in touch if you'd like to work together.</p>
           </Box>
         </Container>
         <Container cols='grid-cols-m-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
